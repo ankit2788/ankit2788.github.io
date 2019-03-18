@@ -1,0 +1,11 @@
+setup.py
+FDynamics/Exceptions.py
+FDynamics/OutputFileHandler.py
+FDynamics/Utils.py
+FDynamics/Visualizations.py
+FDynamics/__init__.py
+FDynamics.egg-info/PKG-INFO
+FDynamics.egg-info/SOURCES.txt
+FDynamics.egg-info/dependency_links.txt
+FDynamics.egg-info/not-zip-safe
+FDynamics.egg-info/top_level.txt
