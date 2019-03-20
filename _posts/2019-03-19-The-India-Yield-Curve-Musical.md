@@ -11,7 +11,7 @@ So, what is this article about? All the time, people talk about the yield curve 
 
 First things first, **How to interpret the chart.**  
 We have the weekly Bond yields of available India Government Bond maturities since  Jan 1998 till 17 March 2019 _(a span of over 20 years, source: investing.com)._  
-If the yield points are not connected in the chart, it represents the unavailability of yield point of an intermediate maturity. As we move along the time, Indian government issued bonds of varying maturities, and hence you will see the curve dancing to its full potential in later stages.
+If the yield points are not connected in the chart, it represents the unavailability of yield point of an intermediate maturity. As we move along the time, Indian government issued bonds of varying maturities, and hence you will see the [curve dancing](/data/pics/2019/03/YieldCurveDance1.gif){:target="_blank"} to its full potential in later stages.
 
 <p class="aligncenter"> 
 <img src="/data/pics/2019/03/YieldCurveDance1.gif" alt="Dance of the curve" width="800" height="500" />
