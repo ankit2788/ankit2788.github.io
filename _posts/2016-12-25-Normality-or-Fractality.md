@@ -2,6 +2,7 @@
 layout: post
 title: "Normality or Fractality?"
 date: 2016-12-26
+tags: Fractals Finance Markets Maths
 ---
 
 

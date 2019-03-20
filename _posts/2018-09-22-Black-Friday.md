@@ -2,6 +2,7 @@
 layout: post
 title: "Black Friday"
 date: 2018-09-22
+tags: Finance Markets India 
 ---
 
 I am pretty sure, the day will be remembered as a _"Black Friday"_ in the history of Indian Financial Markets for many reasons. The fear struck and panic driven market took a significant plunge. If one of the largest private lenders (**NSE**: **YESBANK**) crashing down to almost 34% wasn't enough; a Housing Finance company (**NSE**: **DHFL**) plunged to around 60% INTRADAY, and then subsequently led to a drag of overall markets by over 4% and again pull back in a matter of 45 minutes. Yes, you read it right. SIXTY PERCENT  INTRADAY, erasing it's market capitalisation by roughly _**USD 2 Billion**_

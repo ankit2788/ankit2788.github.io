@@ -2,6 +2,7 @@
 layout: post
 title: "Flash Crash of September 2018"
 date: 2018-09-22
+tags: Finance Markets India 
 ---
 
 [In the previous article](Black-Friday){:target="_blank"}, I tried to unfold the events that led to the drastic morning for YesBank, one of the largest private lenders in the world. Well, no one could have ever imagined what market had to offer in the rest of the day.

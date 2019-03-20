@@ -2,6 +2,7 @@
 layout: post
 title: "India - The dance of Yield Curve"
 date: 2019-03-19
+tags: Finance Markets India Bonds
 ---
 
 Before I begin this article, I will highlight that I am more of an Equities guy, and exploring the vast possibilities on the Fixed Income side as well. So, if some things don't match here, kindly take a moment and highlight them.
