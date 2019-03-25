@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.16.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="2edb78b2-65c4-48d7-adae-aa086382f5d0"></div>
+        </div>
+        
+        <script type="application/json" id="d835fdf9-f127-4163-b083-5c2703fee41d">
+          {"36e8601a-2210-4879-b75b-c9e8d58d33ec":{"roots":{"references":[{"attributes":{"data_source":{"id":"d5a63d04-b34c-4799-8621-7372d7e3353a","type":"ColumnDataSource"},"glyph":{"id":"f3723728-2b86-4604-9c23-287b6b30a24c","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"263d238c-ad1e-4e6a-81d8-bdc3e8b9ad33","type":"Line"},"selection_glyph":null,"view":{"id":"3e8defd0-429a-4a8d-86d5-24fcc090afde","type":"CDSView"}},"id":"251191cf-ad38-4c4b-a93f-d6fbb1644c59","type":"GlyphRenderer"},{"attributes":{"source":{"id":"d5a63d04-b34c-4799-8621-7372d7e3353a","type":"ColumnDataSource"}},"id":"3e8defd0-429a-4a8d-86d5-24fcc090afde","type":"CDSView"},{"attributes":{},"id":"f07f8fa5-736e-460b-803b-8992538a9c57","type":"UnionRenderers"},{"attributes":{},"id":"534b5776-be75-4dbf-a867-0947c7cc68d2","type":"PanTool"},{"attributes":{},"id":"c6b0b6aa-2e69-435d-8c23-bc78a65af087","type":"ResetTool"},{"attributes":{},"id":"b4afe3a0-a02a-4014-bb54-803e425a2778","type":"WheelZoomTool"},{"attributes":{"format":"00"},"id":"570d4cfa-041f-4a9f-baf9-f04e5f5f056b","type":"NumeralTickFormatter"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"c2722811-80b7-41c8-a76c-19b1134b3100","type":"HoverTool"},{"id":"534b5776-be75-4dbf-a867-0947c7cc68d2","type":"PanTool"},{"id":"c6b0b6aa-2e69-435d-8c23-bc78a65af087","type":"ResetTool"},{"id":"b4afe3a0-a02a-4014-bb54-803e425a2778","type":"WheelZoomTool"}]},"id":"d7fcc12f-19d2-4a49-aeec-4c0640a0fe82","type":"Toolbar"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","x":{"field":"Year"},"y":{"field":"india_roadaccidents"}},"id":"263d238c-ad1e-4e6a-81d8-bdc3e8b9ad33","type":"Line"},{"attributes":{"x":{"field":"Year"},"y":{"field":"india_roadaccidents"}},"id":"f3723728-2b86-4604-9c23-287b6b30a24c","type":"Line"},{"attributes":{"callback":null,"end":156733.5},"id":"56f94e0e-7221-4848-98ef-9c1bb8efa1c0","type":"Range1d"},{"attributes":{"axis_label":"Babies born in Switzerland","formatter":{"id":"0fa24c05-7e17-4e19-8466-cfac72335722","type":"BasicTickFormatter"},"plot":{"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},"ticker":{"id":"d959fafd-26fd-4534-9a4e-3aa5912146b6","type":"BasicTicker"},"y_range_name":"Babies born in Switzerland"},"id":"368b9998-b9b4-43b7-93de-ee79a99c14c1","type":"LinearAxis"},{"attributes":{"callback":null,"data":{"Year":{"__ndarray__":"AAAAAABMn0AAAAAAAFCfQAAAAAAAVJ9AAAAAAABYn0AAAAAAAFyfQAAAAAAAYJ9AAAAAAABkn0AAAAAAAGifQAAAAAAAbJ9AAAAAAABwn0AAAAAAAHSfQAAAAAAAeJ9AAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]},"index":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"india_roadaccidents":{"__ndarray__":"AAAAAOD+9EAAAAAAoJz2QAAAAACAL/dAAAAAAFDR+UAAAAAAwPD7QAAAAABAQ/1AAAAAAMCt/kAAAAAAiGsAQQAAAACoZAFBAAAAAJDgAEEAAAAAIMsAQQAAAAC4DAFBAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]},"swiss_births":{"__ndarray__":"AAAAAICK8UAAAAAAoNfxQAAAAABwzPFAAAAAALDp8UAAAAAA4C/yQAAAAAAwufJAAAAAAOAc80AAAAAAIJrzQAAAAACAuvNAAAAAAEAP9EAAAAAAsDL0QAAAAABw0vRAAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]}},"selected":{"id":"af321402-ac63-4709-a00b-d8d1643bb8b5","type":"Selection"},"selection_policy":{"id":"f07f8fa5-736e-460b-803b-8992538a9c57","type":"UnionRenderers"}},"id":"0c2bae13-ab76-4137-a73f-ef921fbff155","type":"ColumnDataSource"},{"attributes":{},"id":"34ac9fb3-0aac-4f1c-8313-24edcd5a4388","type":"Selection"},{"attributes":{"line_color":"green","x":{"field":"Year"},"y":{"field":"swiss_births"}},"id":"73902142-61a0-4907-be7c-04c22cbb4c46","type":"Line"},{"attributes":{"callback":null},"id":"e2e080bc-e772-4d19-b02a-1688d7aa8c28","type":"DataRange1d"},{"attributes":{"source":{"id":"0c2bae13-ab76-4137-a73f-ef921fbff155","type":"ColumnDataSource"}},"id":"b8c000c9-0e84-4967-9e82-cfe02654115c","type":"CDSView"},{"attributes":{"data_source":{"id":"0c2bae13-ab76-4137-a73f-ef921fbff155","type":"ColumnDataSource"},"glyph":{"id":"73902142-61a0-4907-be7c-04c22cbb4c46","type":"Line"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"4a4dc571-ad5c-416e-9df5-92482f2ff594","type":"Line"},"selection_glyph":null,"view":{"id":"b8c000c9-0e84-4967-9e82-cfe02654115c","type":"CDSView"},"y_range_name":"Babies born in Switzerland"},"id":"1f397a09-9ed5-414a-9f81-302cae95c4a7","type":"GlyphRenderer"},{"attributes":{"line_alpha":0.1,"line_color":"#1f77b4","x":{"field":"Year"},"y":{"field":"swiss_births"}},"id":"4a4dc571-ad5c-416e-9df5-92482f2ff594","type":"Line"},{"attributes":{"callback":null,"renderers":"auto","tooltips":[["Road Accidents in India","@india_roadaccidents"],["Babies born in Switzerland","@swiss_births"]]},"id":"c2722811-80b7-41c8-a76c-19b1134b3100","type":"HoverTool"},{"attributes":{},"id":"d959fafd-26fd-4534-9a4e-3aa5912146b6","type":"BasicTicker"},{"attributes":{},"id":"af321402-ac63-4709-a00b-d8d1643bb8b5","type":"Selection"},{"attributes":{"below":[{"id":"abf5cfff-e0b9-4448-8404-2662b27092e4","type":"LinearAxis"}],"extra_y_ranges":{"Babies born in Switzerland":{"id":"63493bde-8d30-4a1f-8382-36e6ea4d2521","type":"Range1d"}},"left":[{"id":"f2ba04b7-54d3-4667-a6a7-631a66440ed4","type":"LinearAxis"}],"plot_height":400,"plot_width":800,"renderers":[{"id":"abf5cfff-e0b9-4448-8404-2662b27092e4","type":"LinearAxis"},{"id":"70cbc109-ba62-4e2b-a5f1-635f5a80e0f0","type":"Grid"},{"id":"f2ba04b7-54d3-4667-a6a7-631a66440ed4","type":"LinearAxis"},{"id":"5b3815ac-ef53-4ee4-af31-265ef9a99130","type":"Grid"},{"id":"251191cf-ad38-4c4b-a93f-d6fbb1644c59","type":"GlyphRenderer"},{"id":"368b9998-b9b4-43b7-93de-ee79a99c14c1","type":"LinearAxis"},{"id":"1f397a09-9ed5-414a-9f81-302cae95c4a7","type":"GlyphRenderer"}],"right":[{"id":"368b9998-b9b4-43b7-93de-ee79a99c14c1","type":"LinearAxis"}],"title":{"id":"ff7a20b3-6084-4427-b4e3-c91eb52259b3","type":"Title"},"toolbar":{"id":"d7fcc12f-19d2-4a49-aeec-4c0640a0fe82","type":"Toolbar"},"x_range":{"id":"e2e080bc-e772-4d19-b02a-1688d7aa8c28","type":"DataRange1d"},"x_scale":{"id":"cd1621f3-7c2d-4345-8fc3-64ebafafa3e8","type":"LinearScale"},"y_range":{"id":"56f94e0e-7221-4848-98ef-9c1bb8efa1c0","type":"Range1d"},"y_scale":{"id":"ff60fdc5-b58b-45fd-9ee3-29f8c0b1946b","type":"LinearScale"}},"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"0fa24c05-7e17-4e19-8466-cfac72335722","type":"BasicTickFormatter"},{"attributes":{"callback":null,"end":93815.70000000001},"id":"63493bde-8d30-4a1f-8382-36e6ea4d2521","type":"Range1d"},{"attributes":{},"id":"fbdc805d-0d5e-462d-9c78-f260580fb020","type":"BasicTickFormatter"},{"attributes":{},"id":"cd1621f3-7c2d-4345-8fc3-64ebafafa3e8","type":"LinearScale"},{"attributes":{},"id":"ff60fdc5-b58b-45fd-9ee3-29f8c0b1946b","type":"LinearScale"},{"attributes":{"callback":null,"data":{"Year":{"__ndarray__":"AAAAAABMn0AAAAAAAFCfQAAAAAAAVJ9AAAAAAABYn0AAAAAAAFyfQAAAAAAAYJ9AAAAAAABkn0AAAAAAAGifQAAAAAAAbJ9AAAAAAABwn0AAAAAAAHSfQAAAAAAAeJ9AAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]},"index":[0,1,2,3,4,5,6,7,8,9,10,11,12,13],"india_roadaccidents":{"__ndarray__":"AAAAAOD+9EAAAAAAoJz2QAAAAACAL/dAAAAAAFDR+UAAAAAAwPD7QAAAAABAQ/1AAAAAAMCt/kAAAAAAiGsAQQAAAACoZAFBAAAAAJDgAEEAAAAAIMsAQQAAAAC4DAFBAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]},"swiss_births":{"__ndarray__":"AAAAAICK8UAAAAAAoNfxQAAAAABwzPFAAAAAALDp8UAAAAAA4C/yQAAAAAAwufJAAAAAAOAc80AAAAAAIJrzQAAAAACAuvNAAAAAAEAP9EAAAAAAsDL0QAAAAABw0vRAAAAAAAAA+H8AAAAAAAD4fw==","dtype":"float64","shape":[14]}},"selected":{"id":"34ac9fb3-0aac-4f1c-8313-24edcd5a4388","type":"Selection"},"selection_policy":{"id":"a09dd020-0e75-47a3-add9-7df86f91dfaa","type":"UnionRenderers"}},"id":"d5a63d04-b34c-4799-8621-7372d7e3353a","type":"ColumnDataSource"},{"attributes":{},"id":"a09dd020-0e75-47a3-add9-7df86f91dfaa","type":"UnionRenderers"},{"attributes":{"axis_label":"Year","formatter":{"id":"fbdc805d-0d5e-462d-9c78-f260580fb020","type":"BasicTickFormatter"},"plot":{"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},"ticker":{"id":"03b82245-fedf-428d-b47d-206fcb0e0987","type":"BasicTicker"}},"id":"abf5cfff-e0b9-4448-8404-2662b27092e4","type":"LinearAxis"},{"attributes":{"align":"center","plot":null,"text":"Curious Case of Reincarnation","text_color":{"value":"black"},"text_font":"Century Gothic","text_font_size":{"value":"16pt"},"text_font_style":"italic"},"id":"ff7a20b3-6084-4427-b4e3-c91eb52259b3","type":"Title"},{"attributes":{},"id":"03b82245-fedf-428d-b47d-206fcb0e0987","type":"BasicTicker"},{"attributes":{"plot":{"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},"ticker":{"id":"03b82245-fedf-428d-b47d-206fcb0e0987","type":"BasicTicker"}},"id":"70cbc109-ba62-4e2b-a5f1-635f5a80e0f0","type":"Grid"},{"attributes":{"axis_label":"Road Accidents in India","formatter":{"id":"570d4cfa-041f-4a9f-baf9-f04e5f5f056b","type":"NumeralTickFormatter"},"plot":{"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},"ticker":{"id":"e30e7b37-3817-452d-b3ea-169f9690ad6d","type":"BasicTicker"}},"id":"f2ba04b7-54d3-4667-a6a7-631a66440ed4","type":"LinearAxis"},{"attributes":{},"id":"e30e7b37-3817-452d-b3ea-169f9690ad6d","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"c85ae45d-7a25-4000-8545-6a49fe55d5ff","subtype":"Figure","type":"Plot"},"ticker":{"id":"e30e7b37-3817-452d-b3ea-169f9690ad6d","type":"BasicTicker"}},"id":"5b3815ac-ef53-4ee4-af31-265ef9a99130","type":"Grid"}],"root_ids":["c85ae45d-7a25-4000-8545-6a49fe55d5ff"]},"title":"Bokeh Application","version":"0.12.16"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('d835fdf9-f127-4163-b083-5c2703fee41d').textContent;
+                  var render_items = [{"docid":"36e8601a-2210-4879-b75b-c9e8d58d33ec","elementid":"2edb78b2-65c4-48d7-adae-aa086382f5d0","modelid":"c85ae45d-7a25-4000-8545-6a49fe55d5ff"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>

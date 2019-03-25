@@ -4,6 +4,7 @@ title: "2018 - The Year of Volatility"
 date: 2019-01-13
 tags: Finance Markets India 
 comments: true
+categories: [Finance]
 ---
 
 2018, a year full of roller-coaster ride with significant volatility across the Equities world. India was not an exception. Though faring better than global economies, Indian Stock Index, _NIFTY50_, ended up 3.6% up from 2017 end! Ended UP, Yes. That was a good take away for Indian Equities. Only Brazil, in emerging and developed economies, was higher.  
