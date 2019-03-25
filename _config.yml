@@ -91,6 +91,11 @@ defaults:
     values:
       menu: true
       order: 3
+  - scope:
+      path: about.md
+    values:
+      menu: true
+      order: 4
 
 # describe my tags
 custom_tag_description:

@@ -14,13 +14,12 @@ description: >
 
 # You can show the description on the page by deleting this line:
 hide_description: true
+cover: true
 
 # TODO
 image: /assets/img/danbo-me.png
 ---
 
-
-## A Free Blogging Theme
 **Think again.**
 
 <!--posts-->

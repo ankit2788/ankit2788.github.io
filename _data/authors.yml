@@ -1,6 +1,7 @@
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
 # You can change `author1` to your shortname.
+
 author1:
   # Replace <...> with your own (remove the < >)
   name:              Ankit Gupta
@@ -9,6 +10,15 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
+    <h3> Education </h3> 
+      Bachleors in Electrical Engineering (IIT Delhi)<br>
+      Masters in Advanced Finance (IE Business School, SPAIN)
+
+    <h3> Professional Experience </h3>
+      Wallsoft Labs - High Frequency Trading (2 years & continue...)<br>
+      JPMorgan Chase - Equities Derivatives Group (7 years)<br>
+
+  
 
 
   # This photo will be used in the about section.
