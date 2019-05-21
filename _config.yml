@@ -87,15 +87,20 @@ defaults:
       menu: true
       order: 2
   - scope:
+      path: fractals_blog/index.html
+    values:
+      menu: true
+      order: 3 
+  - scope:
       path: categories/index.html
     values:
       menu: true
-      order: 3
+      order: 4
   - scope:
       path: about.md
     values:
       menu: true
-      order: 4
+      order: 5
 
 # describe my tags
 custom_tag_description:
