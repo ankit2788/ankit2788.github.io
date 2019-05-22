@@ -15,6 +15,7 @@ layout: feed
 	</author>
 
 	{% for post in site.posts %}
+	{% if post.categories contains 'Finance' %}
 		<entry>
 			<title>{{ post.title }}</title>
 			<link href="http://ankit2788.github.io{{ post.url }}"/>
@@ -22,6 +23,7 @@ layout: feed
 			<id>http://ankit2788.github.io{{ post.id }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
+	{% endif %}
 	{% endfor %}
 
 </feed>

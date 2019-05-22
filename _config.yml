@@ -55,7 +55,7 @@ permalink:             /:year/:month/:day/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              5
-paginate_path:         /page-:num/
+paginate_path:         page-:num/
 excerpt_separator:     <!--more-->
 # Customizaton
 # ========================================================================================
@@ -80,27 +80,27 @@ defaults:
       path: isitpossible.md
     values:
       menu: true
-      order: 1
+      order: 2
   - scope:
       path: blogs/index.html
     values:
       menu: true
-      order: 2
+      order: 3
   - scope:
-      path: fractals_blog/index.html
+      path: Fractals/index.html
     values:
       menu: true
-      order: 3 
+      order: 1 
   - scope:
       path: categories/index.html
     values:
       menu: true
-      order: 4
+      order: 3
   - scope:
       path: about.md
     values:
       menu: true
-      order: 5
+      order: 4
 
 # describe my tags
 custom_tag_description:

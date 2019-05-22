@@ -17,13 +17,16 @@ layout: base
 {% assign list_entry    = date_formats.list_entry    | default:"%d %b" %}
 
 {% for post in site.posts %}
-  {% assign currentdate = post.date | date:list_group_by %}
-  {% if currentdate != date %}
-    {% unless forloop.first %}</ul>{% endunless %}
-    <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
-    <ul class="related-posts">
-    {% assign date = currentdate %}
+  {% if post.categories contains 'Finance' %}
+
+    {% assign currentdate = post.date | date:list_group_by %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
+      <ul class="related-posts">
+      {% assign date = currentdate %}
+    {% endif %}
+    {% include post-list-item.html post=post format=list_entry %}
+    {% if forloop.last %}</ul>{% endif %}
   {% endif %}
-  {% include post-list-item.html post=post format=list_entry %}
-  {% if forloop.last %}</ul>{% endif %}
 {% endfor %}

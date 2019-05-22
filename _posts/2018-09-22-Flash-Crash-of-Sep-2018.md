@@ -7,7 +7,7 @@ comments: true
 categories: [Finance]
 ---
 
-[In the previous article](Black-Friday){:target="_blank"}, I tried to unfold the events that led to the drastic morning for YesBank, one of the largest private lenders in the world. Well, no one could have ever imagined what market had to offer in the rest of the day.
+[In the previous article](../Black-Friday){:target="_blank"}, I tried to unfold the events that led to the drastic morning for YesBank, one of the largest private lenders in the world. Well, no one could have ever imagined what market had to offer in the rest of the day.
 
 Around 12:25 PM, in the so far already quite an eventful day, [this happened](https://www.youtube.com/watch?v=abaPjYiElew){:target="_blank"}. In a matter of 30 mins, the housing finance market in India collapsed; led by one of the premier Housing Finance companies: __Deewan Housing Finance Limited__ (DHFL). DHFL had fallen down by **60%** intraday from the levels of INR 610 a piece to INR 275\. This drop was just in 30 minutes, and could have been even faster if there were no circuit breaker limits applicable by the exchange.
 
@@ -91,4 +91,4 @@ As I mentioned, automated trading is part and parcel in today's financial market
 
 There are many factors here which need to be delved into in detail by appropriate authorities. Factors such as Company's fundamentals, ratings issued by rating agencies, overall Housing market Financing situation as well as possibility of rumour spread panic and algorithm driven sell off. None of these things can not be ruled out. There are possibilities at every front.
 
-I am sure, SEBI (Securities and Exchange Board of India) will definitely take the appropriate steps and perform the necessary investigation about this un-eventful day, which saw a company plunging down by 60% in a matter of 30 minutes, and this is after the [34% removal of market cap](Black-Friday){:target="_blank"} in one of the largest private lenders in India.
+I am sure, SEBI (Securities and Exchange Board of India) will definitely take the appropriate steps and perform the necessary investigation about this un-eventful day, which saw a company plunging down by 60% in a matter of 30 minutes, and this is after the [34% removal of market cap](../Black-Friday){:target="_blank"} in one of the largest private lenders in India.
