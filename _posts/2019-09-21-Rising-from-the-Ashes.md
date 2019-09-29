@@ -8,7 +8,7 @@ categories: [Finance]
 ---
 
 Something extraordinary happened on *20 Sept 2019, the Friday*. Just remember this date. 
-Rewind back exactly 1 year ago. 21 Sept 2018, Friday, again something extraordinary happened, The Flash Crash of 2018.](/2018-09-22-Flash-Crash-of-Sep-2018.md){:target="_blank"}.
+Rewind back exactly 1 year ago. 21 Sept 2018, Friday, again something extraordinary happened, [The Flash Crash of 2018.](/2018-09-22-Flash-Crash-of-Sep-2018.md){:target="_blank"}
 
 This specific date doesn't define calmness, atleast in Indian markets. If last year was a surprise crash, this time it was a surprise uprising. 
 
