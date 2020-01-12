@@ -98,6 +98,7 @@ Ever heard of CGI in reference to movies? CGI stands for [Computer Generated Ima
 
 Clearly, Benoit Mandelbrot opened up a whole new world of mathematics by introducing Fractals. It is not just in graphics and animation that we see its application. In the next articles, I will talk about its applications in various other fields where Fractals has gained momentum. 
 
+**Note** - For _Python_ source code for such images, please contact me directly!
 
 
 
