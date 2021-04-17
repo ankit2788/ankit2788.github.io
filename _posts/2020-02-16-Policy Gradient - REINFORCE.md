@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Policy Gradient - REINFORCE"
-date: 2021-04-16
+date: 2020-02-16
 tags: Mathematics Reinforcement MachineLearning
 comments: true
 categories: [Reinforcement]

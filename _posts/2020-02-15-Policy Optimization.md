@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Policy Optimization - Part 0"
-date: 2021-04-15
+date: 2020-02-15
 tags: Mathematics Reinforcement MachineLearning
 comments: true
 categories: [Reinforcement]
