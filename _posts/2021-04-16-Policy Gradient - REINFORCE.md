@@ -147,6 +147,13 @@ Here, we learnt about the most basic Policy Gradient alogrithm. Ofcourse, this i
 ----------------
 
 
+# Appendix
+
+### References
+
+> 1. Reinforcement Learning, An Introduction (Second Edition). [Sutton and Barto ](http://incompleteideas.net/book/the-book-2nd.html) <br>
+> 2. [Karpathy Github page](http://karpathy.github.io/2016/05/31/rl/) <br>
+> 3. [Lilianweng Github Page](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html)
 
 
 
