@@ -1,11 +1,32 @@
 ---
 layout: post
-title: "Policy Gradient - REINFORCE"
-date: 2021-04-16
+title: "Actor Critic Methods"
+date: 2021-04-21
 tags: Mathematics Reinforcement MachineLearning
 comments: true
 categories: [Reinforcement]
 ---
+
+Policy Gradient are "cool" algorithms to make the agent learn. We saw how REINFORCE, as simple as it is, can help learn the agent. With few tricks, such as _baseline methods_, learning variances can be reduced further. 
+Next in line of the Policy Gradient techniques is Actor Critic (AC) Methods. First introduced in 2013 through the paper [Natural Actor-Critic Algorithms](https://hal.inria.fr/hal-00840470/document), they now set a foundation to a series of advanced AC methods (A2C, A3C), which we will dig further in later articles. 
+
+So, lets begin with the need of AC methods in the first place before we jump onto the mathematical technicalities.
+
+## A case for Actor Critic methods?
+<p class="aligncenter"> 
+<img src="/data/pics/2021/04/reinforce_episode.png" alt="Reinforce" width="615" height="350" />
+</p>
+
+1. __Dont need Full episode__ 
+A fully Monte Carlo method, REINFORCE needed a complete knowledge of entire episode before the policy could learn. In above episode, $$a_1$$ taken at $$s_1$$ turns out to generate negative reward. So, why run entire episide to discredit action $$a_1$$?
+
+Actor Critic methods comes handy in this case, as they use [__Temporal Difference (TD)__](https://en.wikipedia.org/wiki/Temporal_difference_learning) learnings.
+
+2. __Critic to judge the performance__
+Imagine you (_actor_) are learning to ride a bike. You paddle hard! But your mom (_critic_) tells you to paddle harder!
+That's what Actor Critic is. Another agent to evaluate the performance under current policy.
+Simple, isnt it? 
+
 
 In this article, we will talk about the foundation Policy Gradient algorithm: __REINFORCE__.
 
@@ -73,66 +94,27 @@ A rough REINFORCE flow looks like:
 There are many implementations available on the web, and I will not write another one here. The idea wanted to highlight is certain nuances while implementing this algorithm. So, sip your coffee slowly now!
 
 * __Policy Network__:
-    * Input -- state vector 
-    * __Method 1__: Update the target values in policy network
-        * Predicted Value -- Network's predicted log probabilities (_since softmax is the output layer_) 
-        * Target Value -- 
-            * Since, the probability of a promising action should be strengthened, we can use an updated target value
-            * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{J} $$, which further reduces to 
-            * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{log}\pi_\theta(s/a) $$.             
-            
+    * Input: state vector 
+    * Output: log probability per action,; determined using softmax
+    * Loss function: Cross entropy. 
+        * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
+        * Our Policy Gradient also seeks for log of probability
+    * Target value: Now, this is quite tricky. 
+        * We use NNs under the realm of supervised learning. 
+        * However, in RL, we are trying to better our target itself. 
+        * Hence, we use a proxy for target variable as below:
 
-        * Loss function -- Cross entropy. 
-            * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
-            * Our Policy Gradient also seeks for log of probability
+        ~~~python
+        # p_i --> action probability
+        # y_i --> 1 for chosen action and 0 for not chosen action
+        # alpha --> learning rate for policy network
+        # G --> discounted Rewards
 
-                ~~~python
-                # p_i --> action probability
-                # y_i --> 1 for chosen action and 0 for not chosen action
-                # beta --> learning rate for policy network
-                # G --> discounted Rewards
+        gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
 
-                gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
-
-                # update the target value by gradient
-                y_target = p_i +  beta * G * gradient        
-                ~~~ 
-
-    * __Method 2__: Update policy network parameter $$\theta$$ directly using [tensorflow eager execution](https://www.tensorflow.org/guide/eager)
-        * Custom Loss Function -- 
-            ~~~python
-            losses = []         # accumulate losses 
-
-            # start eager execution
-            with tf.GradientTape() as tape:
-                for index, sample in enumerate(self.memory):
-                    # sample is a tuple of current state, actions, rewards, next states
-
-                    # get current state in the memory variable
-                    state = tf.Variable([sample[0]], trainable=True, dtype=tf.float64)
-
-                    # given current state, get prob of actions using policy network
-                    prob = self.PolicyNetwork.model(state, training = True)
-
-                    # actual action taken, and taking the log of probability of actual action taken
-                    action = sample[1]              
-                    actionProb = prob[0, action]
-                    logProb = tf.math.log(actionProb)
-
-                    # loss of this sample is defined as G*log(p) --> this is as per policy gradient
-                    sampleloss = logProb * discounted_rewards[index][0]
-
-                    losses.append(-sampleloss)      # this is negative, since we are interested in gradient ascent
-
-            
-                networkLoss = sum(losses)
-
-                # Back propagation
-                # compute the gradient of network loss wrt network parameters, and optimize the network
-                grads = tape.gradient(networkLoss, self.PolicyNetwork.model.trainable_variables)
-                self.PolicyNetwork.optimizer.apply_gradients(zip(grads, self.PolicyNetwork.model.trainable_variables))
-            ~~~ 
-
+        # update the target value by gradient
+        y_target = p_i +  alpha * G * gradient        
+        ~~~ 
 
 * __Training the agent__:
     * Since this is Monte carlo method, agent can only learn once the entire episode has ended
