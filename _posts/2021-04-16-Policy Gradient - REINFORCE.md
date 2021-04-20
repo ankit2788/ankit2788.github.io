@@ -74,26 +74,61 @@ There are many implementations available on the web, and I will not write anothe
 
 * __Policy Network__:
     * Input: state vector 
-    * Output: log probability per action,; determined using softmax
-    * Loss function: Cross entropy. 
-        * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
-        * Our Policy Gradient also seeks for log of probability
-    * Target value: Now, this is quite tricky. 
-        * We use NNs under the realm of supervised learning. 
-        * However, in RL, we are trying to better our target itself. 
-        * Hence, we use a proxy for target variable as below:
+    * __Method 1__
+        * Output: log probability per action,; determined using softmax
+        * Loss function: Cross entropy. 
+            * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
+            * Our Policy Gradient also seeks for log of probability
+        * Target value: Now, this is quite tricky. 
+            * We use NNs under the realm of supervised learning. 
+            * However, in RL, we are trying to better our target itself. 
+            * Hence, we use a proxy for target variable as below:
 
-        ~~~python
-        # p_i --> action probability
-        # y_i --> 1 for chosen action and 0 for not chosen action
-        # alpha --> learning rate for policy network
-        # G --> discounted Rewards
+            ~~~python
+            # p_i --> action probability
+            # y_i --> 1 for chosen action and 0 for not chosen action
+            # alpha --> learning rate for policy network
+            # G --> discounted Rewards
 
-        gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
+            gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
 
-        # update the target value by gradient
-        y_target = p_i +  alpha * G * gradient        
-        ~~~ 
+            # update the target value by gradient
+            y_target = p_i +  alpha * G * gradient        
+            ~~~ 
+
+    * __Method 2__: Utilizing tensorflow _eager execution_
+        * Custom Loss Function: 
+            ~~~python
+            losses = []         # accumulate losses 
+
+            # start eager execution
+            with tf.GradientTape() as tape:
+                for index, sample in enumerate(self.memory):
+
+                    # get current state in the memory variable
+                    state = tf.Variable([sample[0]], trainable=True, dtype=tf.float64)
+
+                    # given current state, get prob of actions using policy network
+                    prob = self.PolicyNetwork.model(state, training = True)
+
+                    # actual action taken, and taking the log of probability of actual action taken
+                    action = sample[1]
+                    actionProb = prob[0, action]
+                    logProb = tf.math.log(actionProb)
+
+                    # loss of this sample is defined as G*log(p) --> this is as per policy gradient
+                    sampleloss = logProb * discounted_rewards[index][0]
+
+                    losses.append(-sampleloss)      # this is negative, since we are interested in gradient ascent
+
+            
+                networkLoss = sum(losses)
+
+                # compute the gradient of network loss wrt network parameters, and optimize the network
+                grads = tape.gradient(networkLoss, self.PolicyNetwork.model.trainable_variables)
+                self.PolicyNetwork.optimizer.apply_gradients(zip(grads, self.PolicyNetwork.model.trainable_variables))
+            ~~~ 
+
 
 * __Training the agent__:
     * Since this is Monte carlo method, agent can only learn once the entire episode has ended
