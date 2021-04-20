@@ -106,6 +106,7 @@ There are many implementations available on the web, and I will not write anothe
             # start eager execution
             with tf.GradientTape() as tape:
                 for index, sample in enumerate(self.memory):
+                    # sample is a tuple of current state, actions, rewards, next states
 
                     # get current state in the memory variable
                     state = tf.Variable([sample[0]], trainable=True, dtype=tf.float64)
@@ -114,7 +115,7 @@ There are many implementations available on the web, and I will not write anothe
                     prob = self.PolicyNetwork.model(state, training = True)
 
                     # actual action taken, and taking the log of probability of actual action taken
-                    action = sample[1]
+                    action = sample[1]              
                     actionProb = prob[0, action]
                     logProb = tf.math.log(actionProb)
 
