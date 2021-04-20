@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Policy Gradient - REINFORCE"
-date: 2021-04-16
+title: "Actor Critic Methods"
+date: 2021-04-21
 tags: Mathematics Reinforcement MachineLearning
 comments: true
 categories: [Reinforcement]
