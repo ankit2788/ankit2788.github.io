@@ -73,31 +73,33 @@ A rough REINFORCE flow looks like:
 There are many implementations available on the web, and I will not write another one here. The idea wanted to highlight is certain nuances while implementing this algorithm. So, sip your coffee slowly now!
 
 * __Policy Network__:
-    * Input: state vector 
-    * __Method 1__
-        * Output: log probability per action,; determined using softmax
-        * Loss function: Cross entropy. 
+    * Input -- state vector 
+    * __Method 1__: Update the target values in policy network
+        * Predicted Value -- Network's predicted log probabilities (_since softmax is the output layer_) 
+        * Target Value -- 
+            * Since, the probability of a promising action should be strengthened, we can use an updated target value
+            * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{J} $$, which further reduces to 
+            * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{log}\pi_\theta(s/a) $$.             
+            
+
+        * Loss function -- Cross entropy. 
             * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
             * Our Policy Gradient also seeks for log of probability
-        * Target value: Now, this is quite tricky. 
-            * We use NNs under the realm of supervised learning. 
-            * However, in RL, we are trying to better our target itself. 
-            * Hence, we use a proxy for target variable as below:
 
-            ~~~python
-            # p_i --> action probability
-            # y_i --> 1 for chosen action and 0 for not chosen action
-            # alpha --> learning rate for policy network
-            # G --> discounted Rewards
+                ~~~python
+                # p_i --> action probability
+                # y_i --> 1 for chosen action and 0 for not chosen action
+                # beta --> learning rate for policy network
+                # G --> discounted Rewards
 
-            gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
+                gradient = -(p_i - y_i)           # this is the gradient of cross entropy loss
 
-            # update the target value by gradient
-            y_target = p_i +  alpha * G * gradient        
-            ~~~ 
+                # update the target value by gradient
+                y_target = p_i +  beta * G * gradient        
+                ~~~ 
 
-    * __Method 2__: Utilizing tensorflow _eager execution_
-        * Custom Loss Function: 
+    * __Method 2__: Update policy network parameter $$\theta$$ directly using [tensorflow eager execution](https://www.tensorflow.org/guide/eager)
+        * Custom Loss Function -- 
             ~~~python
             losses = []         # accumulate losses 
 
@@ -124,6 +126,7 @@ There are many implementations available on the web, and I will not write anothe
             
                 networkLoss = sum(losses)
 
+                # Back propagation
                 # compute the gradient of network loss wrt network parameters, and optimize the network
                 grads = tape.gradient(networkLoss, self.PolicyNetwork.model.trainable_variables)
                 self.PolicyNetwork.optimizer.apply_gradients(zip(grads, self.PolicyNetwork.model.trainable_variables))
