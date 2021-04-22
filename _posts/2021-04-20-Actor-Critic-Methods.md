@@ -166,8 +166,8 @@ So far, we only talked about TD based critic. But, you can ask whether that's th
 > 1. Reinforcement Learning, An Introduction (Second Edition). [Sutton and Barto ](http://incompleteideas.net/book/first/ebook/node66.html){:target="_blank"} <br>
 > 2. [University of California, Berkeley - Youtube Lecture](https://www.youtube.com/watch?v=EKqxumCuAAY&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=8){:target="_blank"} <br>
 > 3. [University of California, Berkeley - Lecture slides](http://rail.eecs.berkeley.edu/deeprlcourse-fa17/f17docs/lecture_5_actor_critic_pdf){:target="_blank"} <br>
-> 3. [Lilianweng Github Page](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html){:target="_blank"}
-
+> 4. [Lilianweng Github Page](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html){:target="_blank"}
+> 5. [Phil Tabor's Youtube Page](https://www.youtube.com/watch?v=LawaN3BdI00){:target="_blank"}
 
 
 
