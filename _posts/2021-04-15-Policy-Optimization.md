@@ -8,10 +8,10 @@ categories: [Reinforcement]
 ---
 
 
-Policy based algorithms have gained quite some popularity. With usage across continuous space-continuous actions, these algorithms cater to wide variety of problems ranging from [systematic trading](https://arxiv.org/abs/1911.10107) algorithms to [self-driving cars](https://link.springer.com/chapter/10.1007/978-981-15-1081-6_5). So, what are these policy based algorithms and why are they gaining such popularity. This series of articles is dedicated to explaining wide variety of Policy Gradient algorithms. 
+Policy based algorithms have gained quite some popularity. With usage across continuous space-continuous actions, these algorithms cater to wide variety of problems ranging from [systematic trading](https://arxiv.org/abs/1911.10107){:target="_blank"} algorithms to [self-driving cars](https://link.springer.com/chapter/10.1007/978-981-15-1081-6_5){:target="_blank"}. So, what are these policy based algorithms and why are they gaining such popularity. This series of articles is dedicated to explaining wide variety of Policy Gradient algorithms. 
 
 ## A quick recap on Value based agents
-As we have read that [Value based learnings](https://en.wikipedia.org/wiki/Reinforcement_learning#Value_function) (such as _Q-learning_, _DQN_, _DDQN_ etc.) algos aim to maximize the state-value (or action-value). <br>
+As we have read that [Value based learnings](https://en.wikipedia.org/wiki/Reinforcement_learning#Value_function){:target="_blank"} (such as _Q-learning_, _DQN_, _DDQN_ etc.) algos aim to maximize the state-value (or action-value). <br>
 $$ V^\pi(s) = \mathbb{E}[R|s, \pi] $$. <br>
 $$ V^*(s) = max_\pi V^\pi(s) $$.
 
@@ -37,7 +37,7 @@ We have been using $$ \pi({a/s}, \theta) $$ as our policy. But, we never thought
 __Objective__:
 $$ {max} {J}(\theta) $$, where $${J} {, } \theta$$ refer to performance measure and policy parameters respectively.
 
-We can use [stochastic gradient ascent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent) methods to solve this optimization problem. I will not go into mathematical details as there is a lot of literature available on that. In short, here is what comes out as policy gradient algorithm:
+We can use [stochastic gradient ascent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent){:target="_blank"} methods to solve this optimization problem. I will not go into mathematical details as there is a lot of literature available on that. In short, here is what comes out as policy gradient algorithm:
 
 $$ \nabla_\theta{J}(\theta) \propto  {G}.\nabla_\theta{log}\pi_\theta(s/a) $$ <br>
 $$ \theta_{t+1} = \theta_{t} + \alpha.G_t.\nabla_\theta{log}\pi_\theta(s/a) $$
@@ -69,7 +69,7 @@ The next few articles in this series are dedicated to individual algorithms alon
 
 ### 1. Notations
 Mathematics isn't fun without complex equations :) <br>
-So, here is the [summary](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html#notations) of all variables used in various equations related to Policy Optimization. 
+So, here is the [summary](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html#notations){:target="_blank"} of all variables used in various equations related to Policy Optimization. 
 
 <img src="/data/pics/2021/04/notations.png" alt="Simple PG network" width="760" height="688" />
 

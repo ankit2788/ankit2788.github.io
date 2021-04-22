@@ -34,14 +34,15 @@ We would like to learn a policy that can take best actions without consulting th
 __Objective__:
 $$ {max} {J}(\theta) $$, where $${J} {, } \theta$$ refer to performance measure and policy parameters respectively.
 
-Using [stochastic gradient ascent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent), we update $$\theta$$ in the direction of $$\nabla_\theta{J(\theta)}$$. <br>
+Using [stochastic gradient ascent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent){:target="_blank"}, we update $$\theta$$ in the direction of $$\nabla_\theta{J(\theta)}$$. <br>
 $$ \theta_{t+1} = \theta_{t} + \alpha.\mathbb{E}[\nabla_\theta{J(\theta)}] $$
 
 It turns out that computing gradient of performance is further simplified to:
 
-$$ \nabla_\theta{J}(\theta) \propto  {G}.\nabla_\theta{log}\pi_\theta(s/a) $$ <br>
+$$ \nabla_\theta{J}(\theta) \propto  \mathbb{E_\pi}[{G_t}.\nabla_\theta{log}\pi_\theta(s/a)] $$ <br>
+where $$G_t$$ is the discounted return 
 
-and $$\theta$$ udpate is re-written as :
+Hence,  $$\theta$$ udpate is re-written as :
 $$ \theta_{t+1} = \theta_{t} + \alpha.G_t.\nabla_\theta{log}\pi_\theta(s/a) $$
 
 Key takeaways from above equation:
@@ -51,11 +52,11 @@ Key takeaways from above equation:
 
 ## Quick peek into the Algo 
 Before we delve into the detailed algorithm, here are few tacts related to REINFORCE:
-* A [_Monte Carlo_ based method](https://www.analyticsvidhya.com/blog/2018/11/reinforcement-learning-introduction-monte-carlo-learning-openai-gym/), i.e. it needs knowledge of full episode before learning.
-* An [_On Policy_ algorithm](https://analyticsindiamag.com/reinforcement-learning-policy/), i.e. only learns the policy which decides the actions.
+* A [_Monte Carlo_ based method](https://www.analyticsvidhya.com/blog/2018/11/reinforcement-learning-introduction-monte-carlo-learning-openai-gym/){:target="_blank"}, i.e. it needs knowledge of full episode before learning.
+* An [_On Policy_ algorithm](https://analyticsindiamag.com/reinforcement-learning-policy/){:target="_blank"}, i.e. only learns the policy which decides the actions.
 <p></p>
 
-Here is a snippet of psuedo code taken from [Sutton and Barto's RL Book](http://incompleteideas.net/book/the-book-2nd.html)
+Here is a snippet of psuedo code taken from [Sutton and Barto's RL Book](http://incompleteideas.net/book/the-book-2nd.html){:target="_blank"}
 
 <p class="aligncenter"> 
 <img src="/data/pics/2021/04/reinforce_algo.png" alt="Reinforce Algo" width="650" height="250" />
@@ -79,11 +80,11 @@ There are many implementations available on the web, and I will not write anothe
         * Target Value -- 
             * Since, the probability of a promising action should be strengthened, we can use an updated target value
             * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{J} $$, which further reduces to 
-            * $$ \pi(s/a) : \pi(s/a) + \beta.\nabla_\theta{log}\pi_\theta(s/a) $$.             
+            * $$ \pi(s/a) : \pi(s/a) + \beta.G.\nabla_\theta{log}\pi_\theta(s/a) $$.             
             
 
         * Loss function -- Cross entropy. 
-            * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy) : $$L = \sum(y_i.{log p_i})$$
+            * [Cross Entropy Loss](https://en.wikipedia.org/wiki/Cross_entropy){:target="_blank"} : $$L = \sum(y_i.{log p_i})$$
             * Our Policy Gradient also seeks for log of probability
 
                 ~~~python
@@ -98,7 +99,7 @@ There are many implementations available on the web, and I will not write anothe
                 y_target = p_i +  beta * G * gradient        
                 ~~~ 
 
-    * __Method 2__: Update policy network parameter $$\theta$$ directly using [tensorflow eager execution](https://www.tensorflow.org/guide/eager)
+    * __Method 2__: Update policy network parameter $$\theta$$ directly using [tensorflow eager execution](https://www.tensorflow.org/guide/eager){:target="_blank"}
         * Custom Loss Function -- 
             ~~~python
             losses = []         # accumulate losses 
@@ -190,9 +191,9 @@ Here, we learnt about the most basic Policy Gradient alogrithm. Ofcourse, this i
 
 ### References
 
-> 1. Reinforcement Learning, An Introduction (Second Edition). [Sutton and Barto ](http://incompleteideas.net/book/the-book-2nd.html) <br>
-> 2. [Karpathy Github page](http://karpathy.github.io/2016/05/31/rl/) <br>
-> 3. [Lilianweng Github Page](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html)
+> 1. Reinforcement Learning, An Introduction (Second Edition). [Sutton and Barto ](http://incompleteideas.net/book/the-book-2nd.html){:target="_blank"} <br>
+> 2. [Karpathy Github page](http://karpathy.github.io/2016/05/31/rl/){:target="_blank"} <br>
+> 3. [Lilianweng Github Page](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html){:target="_blank"}
 
 
 
