@@ -80,12 +80,12 @@ defaults:
       path: isitpossible.md
     values:
       menu: true
-      order: 2
+      order: 3
   - scope:
       path: blogs/index.html
     values:
       menu: true
-      order: 3
+      order: 4
   - scope:
       path: Fractals/index.html
     values:
@@ -95,12 +95,17 @@ defaults:
       path: categories/index.html
     values:
       menu: true
-      order: 3
+      order: 4
   - scope:
       path: about.md
     values:
       menu: true
-      order: 4
+      order: 5
+  - scope:
+      path: Reinforcement/index.html
+    values:
+      menu: true
+      order: 2      
 
 # describe my tags
 custom_tag_description:

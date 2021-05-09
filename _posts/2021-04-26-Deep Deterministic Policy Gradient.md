@@ -439,5 +439,6 @@ With this, we come to an end of DDPG and its explanation. Pour another coffee no
 > 2. DDPG Paper by Lillicrap et al. [Continuous Learning with Deep Reinforcement Learning](https://arxiv.org/pdf/1509.02971.pdf){:target="_blank"} <br>
 > 3. [Sunny Guha Medium Article](https://towardsdatascience.com/deep-deterministic-policy-gradient-ddpg-theory-and-implementation-747a3010e82f){:target="_blank"}
 > 4. [Olivier Sigaud Youtube Lecture](https://www.youtube.com/watch?v=_pbd6TCjmaw){:target="_blank"}
+> 5. [Phil Tabor Youtube Lecture](https://www.youtube.com/watch?v=4jh32CvwKYw){:target="_blank"}
 
 
