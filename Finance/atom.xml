@@ -1,0 +1,29 @@
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>All related to Finance world</title>
+	<link href="http://ankit2788.github.io/Finance/atom.xml" rel="self"/>
+	<link href="http://ankit2788.github.io/Finance"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://ankit2788.github.io/blog</id>
+	<author>
+		<name>Ankit Gupta</name>
+		<email>ankit.elec.iitd@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+	{% if post.categories contains 'Finance' %}
+		<entry>
+			<title>{{ post.title }}</title>
+			<link href="http://ankit2788.github.io{{ post.url }}"/>
+			<updated>{{ post.date | date_to_xmlschema }}</updated>
+			<id>http://ankit2788.github.io{{ post.id }}</id>
+			<content type="html">{{ post.content | xml_escape }}</content>
+		</entry>
+	{% endif %}
+	{% endfor %}
+
+</feed>
