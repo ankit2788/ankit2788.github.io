@@ -34,7 +34,8 @@ The **Iterated Function System(IFS)** for this image can be presented as:
 3. Align them in the shape of an equilateral triangle. (*represented by the translation vector*)
 4. Go to step #2.
 
-$$ f_1(x) = 
+$$ 
+    f_1(x) = 
     \begin{bmatrix}
     .5 & 0 \\
     0 & .5
