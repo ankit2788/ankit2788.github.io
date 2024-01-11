@@ -5,8 +5,8 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>All about Fractals</title>
-	<link href="http://ankit2788.github.io/Fractals/atom.xml" rel="self"/>
-	<link href="http://ankit2788.github.io/Fractals"/>
+	<link href="http://ankit2788.github.io/Reinforcement/atom.xml" rel="self"/>
+	<link href="http://ankit2788.github.io/Reinforcement"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>http://ankit2788.github.io/blog</id>
 	<author>

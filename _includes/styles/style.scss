@@ -20,10 +20,12 @@
 
 {% assign font_heading = site.font_heading | default:"'Roboto Slab', Helvetica, Arial, sans-serif" %}
 {% assign font =         site.font         | default:"'Noto Sans', Helvetica, Arial, sans-serif" %}
+// {% assign font =         site.font         | default:"'ttc', sans-serif" %}
 
 @import "variables";
 @import "my-variables";
 @import "mixins";
+@import "admonition";
 
 @import "reboot-mod";
 
@@ -63,10 +65,10 @@
 
   {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
     .wf-active {
-      font-family: {{ font | default:"serif" }};
+      font-family: {{ font | default:"sans-serif" }};
 
       h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
-        font-family: {{ font_heading | default:"serif" }};
+        font-family: {{ font_heading | default:"sans-serif" }};
       }
     }
   {% endunless %}
@@ -105,11 +107,11 @@
   @import "my-style";
 
   html {
-    font-family: {{ font | default:"serif" }};
+    font-family: {{ font | default:"sans-serif" }};
   }
 
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
-    font-family: {{ font_heading | default:"serif" }};
+    font-family: {{ font_heading | default:"sans-serif" }};
   }
 {% endunless %}
 
