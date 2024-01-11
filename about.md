@@ -9,11 +9,23 @@ title: About
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <h3> Education </h3> 
+      Bachelors in Electrical Engineering (IIT Delhi)<br>
+      Masters in Advanced Finance (IE Business School, SPAIN)
+
+    <h3> Certifications </h3>
+      FRM, CQF
+      
+    <h3> Professional Experience </h3>
+      Quantitative Researcher & Data Scientist - Fidelity Investments (since 2020...)<br>
+      Quantitative Trader - High Frequency Trading (3 years) <br>
+      Equities Derivatives Group - JP Morgan Chase (7 years) <br>
+
+    <h3>Interesting Projects </h3>
+      [Fractals in Finance](../../../data/documents/MultiFractals_in_Finance.pptx)
 
 # You can show the description on the page by deleting this line:
-hide_description: true
+# hide_description: true
 cover: true
 
 # TODO

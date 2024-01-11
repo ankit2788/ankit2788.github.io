@@ -44,6 +44,10 @@ logo:                  /assets/icons/icon.png
 author:
   name:                Ankit Gupta
   email:               ankit.elec.iitd@gmail.com
+  social:
+    github:            ankit2788
+    email:             mailto:ankit.elec.iitd@gmail.com
+
   # Used by `jekyll-seo-tag`:
 
 
@@ -51,7 +55,8 @@ author:
 copyright:             © 2024. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:year/:month/:day/:title/
+# permalink:             /:year/:month/:day/:title/
+permalink:             /:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              5
@@ -244,7 +249,7 @@ plugins:
 
 theme: jekyll-theme-hydejack
 # remote_theme: qwtel/hydejack@gem
-remote_theme: hydecorp/hydejack
+# remote_theme: hydecorp/hydejack
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------
