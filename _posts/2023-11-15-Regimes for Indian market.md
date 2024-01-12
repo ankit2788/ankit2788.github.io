@@ -32,7 +32,7 @@ The GMMs use various gaussian distributions to model different parts of the data
 Expanding this analogy onto our analysis, instead of just taking the Nifty50 returns, we will dig deeper and consider different market factors. Besides the Core Macro Equity factor (Nifty 50), we will also look at how other asset classes such as currency, rates have fared during different regimes. Breaking down the Equity market further into different styles can provide some insights on performances during different regimes.
 
 <p class="aligncenter"> 
-<img src="/data/pics/2023/RegimeIdentification/GMM_stats.png" alt="Gaussian Mixture models"  width="607" height="520" text-align="left"/>
+<img src="/data/pics/2023/RegimeIdentification/GMM_Stats.png" alt="Gaussian Mixture models"  width="607" height="520" text-align="left"/>
 </p>
 
 Any machine learning classification model can only provide you the distinguishing classes. It, however, can not suggest the underlying meaning of the class. GMMs are no different. The model segregated the time series into 4 regimes, however its now upto us how we interpret these regimes. 
