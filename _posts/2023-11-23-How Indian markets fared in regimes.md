@@ -4,7 +4,7 @@ title: "Biases and Preferences in the Indian markets"
 date: 2023-11-23
 tags: [Finance, markets, Projectquant]
 comments: true
-categories: [Projectquant, Finance]
+categories: [Projectquant]
 ---
 
 

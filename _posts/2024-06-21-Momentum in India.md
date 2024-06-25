@@ -4,7 +4,7 @@ title: "Momentum in India"
 date: 2024-06-21
 tags: [Finance, markets, Projectquant]
 comments: true
-categories: [Projectquant, Finance]
+categories: [Projectquant, FactorInvesting, Momentum]
 ---
 
 

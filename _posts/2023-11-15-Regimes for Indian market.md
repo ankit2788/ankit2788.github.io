@@ -4,7 +4,7 @@ title: "Machine Learning approach to understand Indian market regime"
 date: 2023-11-15
 tags: [Finance, MachineLearning, markets, Projectquant]
 comments: true
-categories: [Projectquant, Finance]
+categories: [Projectquant]
 ---
 
 
