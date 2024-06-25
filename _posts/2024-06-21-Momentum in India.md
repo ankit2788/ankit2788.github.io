@@ -2,9 +2,9 @@
 layout: quantBook
 title: "Momentum in India"
 date: 2024-06-21
-tags: [Finance, markets, Projectquant]
+tags: [Finance, markets, Projectquant, FactorInvesting, Momentum]
 comments: true
-categories: [Projectquant, FactorInvesting, Momentum]
+categories: [Projectquant]
 ---
 
 
