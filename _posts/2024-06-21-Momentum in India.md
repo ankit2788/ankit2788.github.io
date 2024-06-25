@@ -12,7 +12,7 @@ categories: [Projectquant, Finance]
 
 Eugene Fama and Kenneth French further developed upon the CAPM to introduce 2 new factors that would help determine portfolio's returns. They observed that a certain class of stocks tend to perform better than the market as a whole, i.e. (i) **Small Caps** - _size factor_, (ii) stocks with **higher Book to Market Ratio** - _Value factor_. That led to the formulation of [Fama French 3 - factor model](https://en.wikipedia.org/wiki/Fama%E2%80%93French_three-factor_model)
 
-Factor Investing is a very well researched topic, and there are several journals available detailing it wonderfully. However, most of the research pertains to the developed markets such as United States and Global Markets as a whole. The purpose of this series of articles is to go in depth of nuances pertaining to Indian Markets. The first in this seriesis all about **Momentum Investing**
+Factor Investing is a very well researched topic, and there are several journals available detailing it wonderfully. However, most of the research pertains to the developed markets such as United States and Global Markets as a whole. The purpose of this series of articles is to go in depth of nuances pertaining to Indian Markets. The first in this series is all about **Momentum Investing**
 
 
 ## History of Momentum Investing in India
@@ -59,57 +59,30 @@ Figure 3 _(above)_ and Table 1 _(below)_ illustrates the performance of Momentum
 <br>
 In addition to downturn volatile periods, **underperformance occurs during periods with No Clear trend**, i.e. a mean reverting (_stationary_) markets. In addition to market specific risks, there could be risks associated with **_not so ideal backtests_**. Indian markets dont have a long performance history, due to the not so matured nature of the markets. The backtests, hence, may suffer from **Survivorship bias**, wherein only those listed securities are chosen in the backtest which are still available for public investing. 
 
+{% include /momentumHTML/monthlyExcess.html %}
 
 
-## Base Momentum Fund - The Prototype
+### Interaction with other factors?
 
-### Portfolio Selection
+In the world of factor investing, there are 2 major categories segregating the factors, i.e. (i) Macroeconomic Factors such as Emerging Markets, Inflation, Economic Growth etc, and (ii) Style Factors which include Momentum, Low Volatility, Value, Quality stocks. 
+One of the major benefit of factor investing is providing new avenues of returns, while reducing portfolio correlation levels. In Figure 5 (_below_), the style factors seem to be highly correlated with Momentum factor throughout the market regimes. Though Value's correlation decreases at times, _to levels of 60%_, but it is still high. Hence, a Multi factor Equity Strategy may not provide as much diversification as expected.
 
-Designing the fund entails, selecting the underlying assets, choice of metrics used to identify Momentum, as well as technical implementations such as rebalancing frequency, transaction costs etc. The selection of assets is done on a relative basis, called **Relative Momentum Strategies**, 
+However, benefit may occur by including Gold, as it showcases negative correlation with Momentum factor. Government Securities (_Fixed Income_) also showcase relatively lower correlation throughout. Hence, we may find diversification by including Gold/ GSEC in our portfolio to some extent.
 
-
-<p align="center"> 
-<img src="/data/pics/momentum/relative.png" alt="Relative Momentum Strategy"  width="510" height="320" text-align="center"/>
-</p>
-
-<br>
-To construct and test Momentum Strategies, we would take _top 10_ stocks from Nifty 50 Index _every month_, with _Equal Weightage_ assigned to them every month. We assume a cost of 14 bps on every transaction, which is inclusive of all transaction cost, brokerage fee and taxes on NSE. We will construct the base prototype with 12 month lookback window for the momentum indicator, i.e. identifying stocks with best returns in the last 12 months, skipping the recent 1 month to avoid the "reversal effects", as shown by _Jegadeesh and Titman (1993)_. The portfolio's performance will be compared with Nifty 50's performance during the time. In addition to 12 month Momentum indicator, I will construct 1-, 3-, and 6- months indicators.
-
-The portfolio will start from 1st Jan 2008, the year of Global Financial meltdown. As seen above, I expect the base prototype not to perform better that year. 
+{% include /momentumHTML/MomCorrelationALL.html %}
 
 
-> **NOTE**: There is a survivorship bias, as latest Nifty 50 constituents are used to construct Momentum portfolio in the past.
-<br>
 
 
-### Performance Study
-
-{% include /momentumHTML/CumPerformance_Base.html %}
-
-<br>
-<br>
-
-<p align="center"> 
-<img src="/data/pics/momentum/basePerformance.png" alt="Base Performances"  width="1000" height="260" text-align="center"/>
-</p>
-<br>
-
-The performance usually erodes as the time horizons for calculating the trend signals get shorter. On a full Backtesting period from 2008 onwards, the 12-month Momentum signal yielded a CAGR of nearly 16.8% whereas 1-month signal underperformed with CAGR of just over 13%, still better than Nifty50. The numbers drastically change when the model ran from 2010 onwards, i.e. removing the Financial crisis times. 12-month momentum signal generated CAGR of 20.6%, whereas 6-month and 3-month signals merely reached 16% CAGR. On risk adjusted basis, still longer duration momentum signal outperformed others as well as Nifty50.
 
 
-### Trend Diversification Benefits? 
-{% include /momentumHTML/RollingCorr_Base.html %}
-<br>
 
+## What's Next?
+In this article, we covered briefly about Momentum Investing in India. How has it grown in recent times, and how is it related to other styles. 
 
-Figure 5 (above) show the running correlation of Momentum Strategies with the benchmark, along with the VIX levels. Since the base prototype strategies only differ in the duration of the trend signal, the correlations are pretty high. Hence, the trend diversification benefits may not be significant.
+But How do we construct a Momentum Portfolio? What are the nuances one should consider? Does single Trend Indicator help or can we combine multiple indicators to generate more alpha? 
 
-
-## Conclusion
-In the 1st part of this series, we briefly touched base on the history of Momentum Investing in India, and how this has been the poster boy of Factor Investing in recent times. Besides, we constructed our base Relative Momentum Portfolio with a simple trend following strategy, which did outperform the benchmark. 
-
-The next article will talk about different trend filters, and how a combination of filters can impact the performance of the strategy. Stay tuned!
-
+All these questions will be answered in the next articles. Stay Tuned! 
 
 # Appendix
 
