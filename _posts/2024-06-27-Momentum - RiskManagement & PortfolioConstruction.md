@@ -8,7 +8,7 @@ categories: [Projectquant]
 ---
 
 
-In the [last article](/projectquant/2024-06-25-The Base Momentum Portfolio), we analyzed risk and returns of prototype Momentum factors. There are a number of risks associated to investing in individual Momentum factors. For instance, these factors have negative skewness, i.e. they entail a heavy left tail risk. 
+In the [last article](/projectquant/2024-06-25-The-Base-Momentum-Portfolio/), we analyzed risk and returns of prototype Momentum factors. There are a number of risks associated to investing in individual Momentum factors. For instance, these factors have negative skewness, i.e. they entail a heavy left tail risk. 
 
 In addition to the tail risk, Momentum can underperform during prolonged periods of range-bound price action, and signals used to identify Momentum can also become ineffective during such times. 
 
