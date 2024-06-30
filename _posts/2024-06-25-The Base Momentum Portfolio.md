@@ -8,7 +8,9 @@ categories: [Projectquant]
 ---
 
 
-The [last article](/projectquant/2024-06-21-Momentum-in-India) was all about the History of Momentum Investing in India, and how does it fare with other style factors. In this article, I will outline different implementations of a Momentum strategy, and study the historical properties of a range of simple Momentum strategies (prototype factors). In addition to Historical properties, we will compare how this base prototype fares with other variations in our base selection.
+
+
+In the [previous article](/projectquant/2024-06-25-Momentum-in-India) was all about the History of Momentum Investing in India, and how does it fare with other style factors. In this article, I will outline different implementations of a Momentum strategy, and study the historical properties of a range of simple Momentum strategies (prototype factors). In addition to Historical properties, we will compare how this base prototype fares with other variations in our base selection.
 
 
 ## Base Momentum Fund - The Prototype
