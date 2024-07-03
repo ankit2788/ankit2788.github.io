@@ -1,6 +1,6 @@
 ---
 layout: quantBook
-title: "Momentum - Risk Management and Portfolio Construction"
+title: "[Momentum Investing] Part 3 - Risk Management and Portfolio Construction"
 date: 2024-06-27
 tags: [Finance, markets, Projectquant, FactorInvesting, Momentum]
 comments: true
@@ -34,7 +34,7 @@ Table 1 displays the performance in both the case. As observed, the Stop Loss me
 
 
 <p align="center"> 
-<img src="/data/pics/momentum/article 3/stoploss.png" alt="Stop Losses"  width="685" height="319" text-align="center"/>
+<img src="/data/pics/momentum/article 3/stoploss.png" alt="Stop Losses"  width="617" height="316" text-align="center"/>
 </p>
 
 Another thing to note about the Stop Loss mechanism is when to apply the trigger. In our analysis, we are using daily Stop Loss triggers which are better to reduce the _between-rebalance_ tail risks. Other approaches could be to apply such triggers at lower frequency such as weekly or during rebalancing dates only.
@@ -47,7 +47,7 @@ In summary, introduction to Stop Loss based Risk mechanism can modestly improve 
 {% include /momentumHTML/diversification.html %}
 
 <p align="center"> 
-<img src="/data/pics/momentum/article 3/diversification.png" alt="Diversification Benefits"  width="661" height="242" text-align="center"/>
+<img src="/data/pics/momentum/article 3/diversification.png" alt="Diversification Benefits"  width="646" height="239" text-align="center"/>
 </p>
 
 
@@ -70,7 +70,7 @@ Figure 3 and Table 2 illustrates the portfolio's historical performance under di
 In all these schemes, only Risk Parity portfolio stands out, with higher Sharpe, contributed mainly by lower Volatility. 
 
 <p align="center"> 
-<img src="/data/pics/momentum/article 3/assetallocation.png" alt="Asset Allocation"  width="659" height="280" text-align="center"/>
+<img src="/data/pics/momentum/article 3/assetallocation.png" alt="Asset Allocation"  width="647" height="280" text-align="center"/>
 </p>
 
 
@@ -83,7 +83,7 @@ As illustrated in Figure 4, a pure 12-month trailing Earnings Momentum based mod
 {% include /momentumHTML/earnings.html %}
 
 <p align="center"> 
-<img src="/data/pics/momentum/article 3/earnings.png" alt="Earnings Momentum"  width="817" height="237" text-align="center"/>
+<img src="/data/pics/momentum/article 3/earnings.png" alt="Earnings Momentum"  width="808" height="237" text-align="center"/>
 </p>
 
 

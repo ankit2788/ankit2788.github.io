@@ -1,6 +1,6 @@
 ---
 layout: quantBook
-title: "Momentum Investing in India"
+title: "[Momentum Investing] Part 1 - Origins in India"
 date: 2024-06-21
 tags: [Finance, markets, Projectquant, FactorInvesting, Momentum]
 comments: true

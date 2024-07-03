@@ -1,6 +1,6 @@
 ---
 layout: quantBook
-title: "Momentum - The Base Portfolio"
+title: "[Momentum Investing] Part 2 - The Base Portfolio"
 date: 2024-06-25
 tags: [Finance, markets, Projectquant, FactorInvesting, Momentum]
 comments: true
@@ -21,7 +21,7 @@ Designing the fund entails, selecting the underlying assets, choice of metrics u
 
 
 <p align="center"> 
-<img src="/data/pics/momentum/relative.png" alt="Relative Momentum Strategy"  width="507" height="318" text-align="center"/>
+<img src="/data/pics/momentum/article 2/relative.png" alt="Relative Momentum Strategy"  width="507" height="318" text-align="center"/>
 </p>
 
 <br>
@@ -42,7 +42,7 @@ The portfolio will start from 1st Jan 2008, the year of Global Financial meltdow
 <br>
 
 <p align="center"> 
-<img src="/data/pics/momentum/basePerformance.png" alt="Base Performances"  width="1200" height="580" text-align="center"/>
+<img src="/data/pics/momentum/article 2/basePerformance.png" alt="Base Performances"  width="1205" height="609" text-align="center"/>
 </p>
 <br>
 
@@ -56,7 +56,7 @@ Since the onset of Covid, Momentum Base porfolios have given CAGR of nearly 32%,
 
 In our base portfolio, we chose a standard Trend signal which looks at past X months returns, and picks the top 10 assets every month based on thhe _"momentum"_ score. As above, we tried variations of "X" months, in the form of 12-month, 6-month, 3-month and 1-month. However, all these signals tend to behave in a similar fashion, i.e. they exhibit strong correlations.
 <p align="center"> 
-<img src="/data/pics/momentum/baseCorrelation.png" alt="Base Correlations"  width="593" height="238" text-align="center"/>
+<img src="/data/pics/momentum/article 2/baseCorrelation.png" alt="Base Correlations"  width="593" height="238" text-align="center"/>
 </p>
 
 
@@ -74,7 +74,7 @@ In our base portfolio, we chose a standard Trend signal which looks at past X mo
 <br>
 
 <p align="center"> 
-<img src="/data/pics/momentum/allTrends.png" alt="Base Correlations"  width="876" height="637" text-align="center"/>
+<img src="/data/pics/momentum/article 2/allTrends.png" alt="Base Correlations"  width="826" height="638" text-align="center"/>
 </p>
 
 Table 3 highlights the findings for different trend Indicators. Looking at the full backtest horizon since 2008 and only **the CAGR**, the best strategy came out to be based on MACD Indicator or a Linear combination of different indicators. Though they suffered from higher Volatility and higher Drawdowns. From **Risk adjusted basis**, as expected, Risk adjusted returns Indicator based performed relatively well, along with the linear combination based indicator. In a relatively shorter time frame, since 2020, most of the Momentum strategies generated Sharpe over 1, significantly higher than what Nifty presented. The high drawdowns, ofcourse, can be attributed to the Covid 19 period. 
@@ -89,7 +89,7 @@ Important point to be noted from these findings is that a _combination of indica
 So far, we have just talked about rebalancing every month, and that too on 1st of every month. Is it the most optimized way? In this section, we will analyse varying rebalancing frequencies and days of rebalancing.
 
 <p align="center"> 
-<img src="/data/pics/momentum/rebalFrequency.png" alt="Rebalance Frequencies" width="656" height="224" text-align="center"/>
+<img src="/data/pics/momentum/article 2/rebalFrequency.png" alt="Rebalance Frequencies" width="656" height="224" text-align="center"/>
 </p>
 
 Monthly rebalacing and weekly rebalancing have been the best performaing strategies with our base Trend indicator. Both of them generated a CAGR of nearly 16.8% and sharpe over 0.8. Weekly rebalancing, however, incurred a significantly high transaction costs throughout the backtesting time. We have considered a totat cost of 14 bps on every transaction. Weeklies incurred a total cost of nearly INR 11 Lakh, when portfolio was started with 10 Lakh as initial value. As the rebalancing frequency goes down, the transaction cost also goes down. 
@@ -97,7 +97,7 @@ Monthly rebalacing and weekly rebalancing have been the best performaing strateg
 So far, in all the above experiments, we have rebalanced on the 1st of every rebalancing period. What happens if we rebalance on 2nd of every Month or 15th of every Month? Table 5 below shows the performance of Momentum strategies on different rebalancing days, _assuming a monthly rebalance_. It is clearly evident that rebalancing in the 1st week or last week isnt that beneficial Vs rebalancing in the middle of the month. When we rebalanced between 6th -20th day of Month, the portfolio generated a sharpe of over 0.9, much higher than 0.84 (_when rebalanced on 1st day of Month_)
 
 <p align="center"> 
-<img src="/data/pics/momentum/rebalDay.png" alt="Days of rebalancing"  width="551" height="667" text-align="center"/>
+<img src="/data/pics/momentum/article 2/rebalDay.png" alt="Days of rebalancing"  width="551" height="667" text-align="center"/>
 </p>
 
 ### 3. Impact of Transaction Cost
@@ -106,7 +106,7 @@ We next analyzed the impact of alternative transaction cost assumptions. Portfol
 
 
 <p align="center"> 
-<img src="/data/pics/momentum/costs.png" alt="Days of rebalancing"  width="1102" height="248" text-align="center"/>
+<img src="/data/pics/momentum/article 2/costs.png" alt="Days of rebalancing"  width="1102" height="248" text-align="center"/>
 </p>
 
 ## Conclusion
