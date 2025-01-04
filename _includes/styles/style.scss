@@ -26,6 +26,7 @@
 @import "my-variables";
 @import "mixins";
 @import "admonition";
+@import "sidebar";
 
 @import "reboot-mod";
 
@@ -142,3 +143,5 @@ ul, ol, dl {
   font-family: $code-font-family;
   font-size: 90%;
 }
+
+

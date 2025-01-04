@@ -1,0 +1,33 @@
+/* Style for parent navigation items */
+.nav-item {
+    position: relative;
+  }
+  
+  /* Hide sub-navigation by default */
+  .sub-nav {
+    display: none;
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  
+  /* Show sub-navigation when hovering over the parent item */
+  .nav-item:hover .sub-nav {
+    display: block;
+  }
+  
+  /* Style for sub-navigation items */
+  .sub-nav-item a {
+    color: #fefcfc;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  /* Style for sub-navigation items on hover */
+  .sub-nav-item a:hover {
+    text-decoration: underline;
+  }
+  
+/* Show sub-navigation when 'open' class is applied */
+.nav-item.open .sub-nav {
+  display: block;
+}

@@ -33,43 +33,55 @@ layout: base
   <hr class="sr-only"/>
 {% endif %}
 
+
 <div class="tags-expo">
   <div class="tags-expo-list">
-    {% for tag in site.categories %}
-	  <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+    {% for tag in site.custom_tag_description %}
+
+      {% assign tag_name = tag | first %}      
+      {% assign slug = tag_name | slugify %}
+      
+      {% assign pretty = site.custom_tag_description[tag_name].pretty | default: tag_name%}
+
+	    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ pretty }}</a>
 	{% endfor %}
 	</div>
   <hr/>
   <div class="tags-expo-section">
-    {% for tag in site.categories %}
-	  {% assign tag_name = tag | first %}
-	  
-	  {% assign slug = tag_name | slugify %}
-	  {% assign pretty = site.custom_tag_description[slug].pretty %}
-	  
-	  {% if pretty %}
-		<h2 id="{{ tag[0] | slugify }}"> {{ pretty }} </h2>
-	  {% else %}
-		<h2 id="{{ tag[0] | slugify }}"> {{ tag_name }} </h2>
-	  {% endif %}
-	  
-	  {% assign desc = site.custom_tag_description[tag_name].description %}
-	  {% include message.html text=desc hide=page.hide_description %}
-	  <ul>
-	  {% assign posts = site.categories[tag_name] %}
-	  {% for post in posts limit:3 %}
-		{% include post-list-item.html post=post format=list_entry %}
-		{% if forloop.last %}</ul>{% endif %}
-		
-      {% endfor %}
-	  
-	  {% capture post_title %}<a class="heading flip-title" href="/category/{{tag_name | downcase }}/">{{ site.custom_tag_description[tag_name].pretty }}</a>{% endcapture %}
-    {% assign text = site.data.strings.view_posts | default:"View more posts on <!--post_title-->" %}
-    <footer>
-      <p class="read-more">
-        {{ text | replace:"<!--post_title-->", post_title }}
-      </p>
-    </footer>
+    {% for category in site.custom_tag_description %}
+
+
+      {% assign tag_name = category | first %}      
+      {% assign slug = tag_name | slugify %}
+      
+      {% assign pretty = site.custom_tag_description[tag_name].pretty %}
+      {% assign url = site.custom_tag_description[tag_name].url %}
+      {% assign custom_url = '/' | append: slug %}  <!-- Updated to generate a relative URL without 'categories/' -->
+      
+      
+      {% if pretty %}
+      <h2 id="{{ tag[0] | slugify }}"> {{ pretty }} </h2>
+      {% else %}
+      <h2 id="{{ tag[0] | slugify }}"> {{ tag_name }} </h2>
+      {% endif %}
+      
+      {% assign desc = site.custom_tag_description[tag_name].description %}
+      {% include message.html text=desc hide=page.hide_description %}
+      <ul>
+      {% assign posts = site.categories[tag_name] %}
+      {% for post in posts limit:3 %}
+      {% include post-list-item.html post=post format=list_entry %}
+      {% if forloop.last %}</ul>{% endif %}
+      
+        {% endfor %}
+      
+      {% capture post_title %}<a class="heading flip-title" href="{{custom_url}}">{{ site.custom_tag_description[tag_name].pretty }}</a>{% endcapture %}
+      {% assign text = site.data.strings.view_posts | default:"View more posts on <!--post_title-->" %}
+      <footer>
+        <p class="read-more">
+          {{ text | replace:"<!--post_title-->", post_title }}
+        </p>
+      </footer>
     {% endfor %}
   </div>
 </div>

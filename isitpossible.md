@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: page
 title: Could that be Possible?
 cover: true
+comments: true
 ---
 
 Has the number of superheroes in Marvel comics got to do something with the commercial plane flying licenses given in the United States? Or is there a relation between number of deaths and number of births?

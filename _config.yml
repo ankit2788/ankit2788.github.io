@@ -52,14 +52,14 @@ author:
 
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2024. All rights reserved.
+copyright:             © 2025. All rights reserved.
 
 # Format of the permalinks
 # permalink:             /:year/:month/:day/:title/
 permalink:             /:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
-paginate:              5
+paginate:              10
 paginate_path:         page-:num/
 excerpt_separator:     <!--more-->
 # Customizaton
@@ -80,6 +80,8 @@ font:                   sans-serif
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
+
+
 #the order of the sidebar, hopefully
 defaults:
   - scope:
@@ -87,11 +89,21 @@ defaults:
     values:
       menu: true
       order: 1    
+      children:
+        - title: "Momentum Investing"
+          url: Projectquant/MomentumInvesting/index.html
+        - title: "Financial Engineering"
+          url: Projectquant/FinancialEngineering/index.html
   - scope:
       path: Reinforcement/index.html
     values:
       menu: true
       order: 2       
+      children:
+        - title: "Policy Methods"
+          url: Reinforcement/PolicyMethods/index.html
+        - title: "Applications"
+          url: Reinforcement/Applications/index.html
   - scope:
       path: Fractals/index.html
     values:
@@ -116,24 +128,46 @@ defaults:
 
 # describe my tags
 custom_tag_description:
-  Reinforcement:
-    pretty: Reinforcement Learning
-    description: Posts pertaining to Reinforcement Learning and techniques
-  Fractals:
-    pretty: Fractals
-    description: Posts related to Fractals and its beautiful applications.
-  Finance:
-    pretty: Financial Markets
-    description: Posts pertaining to Financial markets and analysis.
-  India:
-    pretty: Indian Markets
-    description: Posts surrounding Indian Financial markets
-  Markets:
-    pretty: Equities Markets
-    description: Specifically Equities markets 
   Projectquant:
     pretty: Project Quant
     description: Posts pertaining to Project Quant
+    url: Projectquant/index.html
+    tags:
+      MomentumInvesting:
+        description: Posts pertaining to Momentum Investing in Indian markets
+        title: Momentum Investing
+        url: MomentumInvesting/index.html
+      FinancialEngineering:
+        description: Posts pertaining to the practical application of Financial Engineering
+        title: Financial Engineering
+        url: FinancialEngineering/index.html
+
+  Reinforcement:
+    pretty: Reinforcement Learning
+    description: Posts pertaining to Reinforcement Learning and techniques
+    url: Reinforcement/index.html
+    tags:
+      PolicyMethods:
+        description: Posts pertaining to Policy methods in Reinforcement Learning
+        title: Policy Methods
+        url: PolicyMethods/index.html
+      Applications:
+        description: Posts pertaining to applications of RL in the world of Finance
+        title: RL Applications
+        url: Applications/index.html
+
+  Fractals:
+    pretty: Fractals
+    description: Posts related to Fractals and its beautiful applications.
+    url: Fractals/index.html
+
+  Finance:
+    pretty: Financial Markets
+    description: Posts pertaining to Financial markets and analysis.
+    url: Finance/index.html
+
+
+
 
 # 3rd Party Integrations
 # ----------------------------------------------------------------------------------------
@@ -205,12 +239,12 @@ collections:
     output:            true
 
   featured_tags:
-    permalink:         /tag/:name/
+    permalink:         /category/tag/:name/
     output:            true
 
-  projects:
-    permalink:         /projects/:path/
-    output:            true
+  # projects:
+  #   permalink:         /projects/:path/
+  #   output:            true
 
 # File inclusion/exclusion
 # ========================================================================================
@@ -297,12 +331,17 @@ titles_from_headings:
   strip_title:         true
   collections:         true
 
+markdown: kramdown
+# highlighter: rouge
+
 kramdown:
-  footnote_backlink:   '&#x21a9;&#xfe0e;'
+  # input: GFM
   math_engine:         mathjax
-  math_engine_opts:
-    preview:           true
-    preview_as_code:   true
+#   enable_coderay: false
+#   hard_wrap: false
+#   math_engine_opts:    {}
+#   enable_math: false
+#   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
 compress_html:
   comments:            ["<!-- ", " -->"]

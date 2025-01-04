@@ -26,6 +26,19 @@ layout: base
 
 <article class="page" role="article">
   <header>
+
+    
+    <head>
+      <script type="text/javascript" 
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>      
+      <!-- <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/kaTeX/0.13.11/katex.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/kaTeX/0.13.11/katex.min.css"> -->
+      
+    </head>    
+   
+
     <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
     {% include message.html text=page.description hide=page.hide_description %}
   </header>
@@ -36,9 +49,16 @@ layout: base
 
   {% if site.posts.size > 0 %}
     <h2 class="hr">{{ strings.posts | default:"Posts" }}</h2>
+
+    <span style="display: inline-block; width: 200px; text-align: left;"><b>Category</b></span>
+    <span style="display: inline-block; width: 170px; text-align: left;"><b>Tag</b></span>
+    <span style="display: inline-block; width: 450px; text-align: left;"><b>Title</b></span>
+    <span style="display: inline-block; width: 70px; text-align: left;"><b>Date</b></span>
+    
     <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-        {% include post-list-item.html post=post %}
+      {% for post in site.posts limit:100 %}
+        <!-- {% include post-list-item.html post=post %} -->
+        {% include post-list-categoriesItems.html post=post %}
       {% endfor %}
     </ul>
   {% endif %}

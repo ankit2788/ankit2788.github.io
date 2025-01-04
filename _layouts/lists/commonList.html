@@ -1,0 +1,90 @@
+---
+layout: base
+---
+
+{% assign category = page.category | default: "Projectquant" %}
+
+{% if page.image %}
+  <p align="center">
+    <img src="{{ page.image }}" alt="{{ page.title }}">
+  </p>
+{% endif %}
+
+{% if page.title.size > 0 %}
+  <header>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% include message.html text=page.description hide=page.hide_description %}
+  </header>
+  <hr class="sr-only"/>
+{% endif %}
+
+{% assign allowed_tags = site.custom_tag_description[category].tags %}
+<div class="tags-expo">
+  <div class="tags-expo-list">
+    {% for tag in site.categories %}
+      {% if allowed_tags contains tag[0] %}
+        <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <hr/>
+  <div class="tags-expo-section">
+    {% for tag in site.categories %}
+      {% if allowed_tags contains tag[0] %}
+        {% assign tag_name = tag | first %}
+        {% assign title = site.custom_tag_description[category].tags[tag_name].title %}
+        {% assign url = site.custom_tag_description[category].tags[tag_name].url %}
+        {% assign pretty = site.custom_tag_description[category][slug].pretty %}
+
+        {% if pretty %}
+          <h2 id="{{ tag[0] | slugify }}"> {{ pretty }} </h2>
+        {% else %}
+          <h2 id="{{ tag[0] | slugify }}"> {{ title }} </h2>
+        {% endif %}
+
+        {% assign desc = site.custom_tag_description[category].tags[tag_name].description %}
+        {% include message.html text=desc hide=page.hide_description %}
+        <ul>
+          {% assign posts = site.categories[tag_name] %}
+          {% for post in posts limit:5 %}
+            {% include post-list-item.html post=post format=list_entry %}
+            {% if forloop.last %}</ul>{% endif %}
+          {% endfor %}
+
+          {% capture post_title %}
+            <a class="heading flip-title" href="{{ url }}">{{ title }}</a>
+          {% endcapture %}
+          {% assign text = site.data.strings.view_posts | default:"View more posts on <!--post_title-->" %}
+          <footer>
+            <p class="read-more">
+              {{ text | replace:"<!--post_title-->", post_title }}
+            </p>
+          </footer>
+        {% endif %}
+      {% endfor %}
+  </div>
+</div>
+
+
+
+<h2 class="hr"> All published items </h2>
+
+<!-- Begin Date-based Post Listing -->
+{% assign date_formats = site.data.strings.date_formats %}
+{% assign list_group_by = date_formats.list_group_by | default: "%Y" %}
+{% assign list_entry = date_formats.list_entry | default: "%d %b" %}
+
+{% for post in site.posts %}
+  {% if post.categories contains category %}
+    {% assign currentdate = post.date | date:list_group_by %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}</ul>{% endunless %}
+      <h2 id="{{ list_group_by | slugify }}-{{ currentdate | slugify }}" class="hr">{{ currentdate }}</h2>
+      <ul class="related-posts">
+      {% assign date = currentdate %}
+    {% endif %}
+    {% include post-list-item.html post=post format=list_entry %}
+    {% if forloop.last %}</ul>{% endif %}
+  {% endif %}
+{% endfor %}
+<!-- End Date-based Post Listing -->

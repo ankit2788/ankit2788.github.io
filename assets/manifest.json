@@ -22,11 +22,11 @@
       "type": "image/png",
       "sizes": "96x96"
     },
-    {
-      "src": "{{ 'assets/icons/icon@0,75x.png' | relative_url }}",
-      "type": "image/png",
-      "sizes": "144x144"
-    },
+    // {
+    //   "src": "{{ 'assets/icons/icon@0,75x.png' | relative_url }}",
+    //   "type": "image/png",
+    //   "sizes": "144x144"
+    // },
     {
       "src": "{{ 'assets/icons/icon.png' | relative_url }}",
       "type": "image/png",

@@ -17,12 +17,14 @@ description: >
       FRM, CQF
       
     <h3> Professional Experience </h3>
-      Quantitative Researcher & Data Scientist - Fidelity Investments (since 2020...)<br>
+      Single Security Core Analytics - India Lead - BlackRock (2024 - )
+      Quantitative Researcher & Data Scientist - Fidelity Investments (4 years)<br>
       Quantitative Trader - High Frequency Trading (3 years) <br>
       Equities Derivatives Group - JP Morgan Chase (7 years) <br>
 
     <h3>Interesting Projects </h3>
       [Fractals in Finance](../../../data/documents/MultiFractals_in_Finance.pptx)
+      
 
 # You can show the description on the page by deleting this line:
 # hide_description: true

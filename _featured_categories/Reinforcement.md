@@ -13,5 +13,5 @@ description: >
   Reinforcement Learning related articles
 
 # Setting `menu` will generate an entry in the sidebar for this tag.
-# menu: true
+menu: false
 ---

@@ -1,0 +1,31 @@
+<span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
+<ul>
+  {% assign pages = site.pages | where: "menu", true %}  
+  {% assign documents = site.documents | where: "menu", true %}
+  {% assign nodes = pages | concat: documents | sort: "order" %}    
+  {% for node in nodes %}
+
+    {% unless node.redirect_to %}
+      <li class="nav-item{% if page.url contains node.url %} active{% endif %}">
+        <a href="{{ node.url | relative_url }}" class="sidebar-nav-item">
+          {{ node.title }}
+        </a>
+
+        {% if node.children %}
+          <ul class="sub-nav">
+            {% for child in node.children %}
+              <li class="sub-nav-item">
+                <a href="{{ child.url | relative_url }}" class="sidebar-nav-item">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% else %}
+      <li>
+        <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
+      </li>
+    {% endunless %}
+  {% endfor %}
+</ul>
+

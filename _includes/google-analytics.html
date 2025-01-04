@@ -1,0 +1,10 @@
+{% assign googletag = site.google_analytics %}
+
+<script async src="https://www.googletagmanager.com/gtag/js?id={{googletag}}-X"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', googletag);
+</script>
