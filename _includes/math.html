@@ -1,0 +1,25 @@
+<!-- <script type="text/javascript" 
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>       -->
+
+
+<!-- Load MathJax from CDN -->
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!-- Load the MathJax Accessibility Extension -->
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/extensions/a11y/accessibility-menu.js">
+</script>
+
+<!-- MathJax Configuration for Accessibility -->
+<script type="text/javascript">
+    MathJax.Hub.Config({
+        "extensions": ["a11y/accessibility-menu.js"],  // Enable accessibility extension
+        "TeX": {
+            "extensions": ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"]
+        },
+        "showMathMenu": false  // Disable MathJax context menu
+    });
+</script>
