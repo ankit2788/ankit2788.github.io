@@ -1,0 +1,44 @@
+/* Style the summary */
+summary {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+    // border: 1px solid #ddd;
+    // border-radius: 5px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  summary:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* The container for the collapsible header */
+  .collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style for the title */
+  .collapsible-title {
+    flex-grow: 1;
+  }
+  
+  /* Style the icon */
+  .collapsible-icon {
+    font-size: 1em;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Rotate the "+" icon when expanded */
+  details[open] .collapsible-icon {
+    transform: rotate(45deg);
+  }
+  
+  /* When the details are open, change the background color */
+  details[open] summary {
+    background-color: #e0e0e0;
+  }
+  

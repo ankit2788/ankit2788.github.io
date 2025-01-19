@@ -1,0 +1,19 @@
+// _sass/mathjax.scss
+
+// Reset background and padding for <details> and other tags
+details {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  
+  summary {
+    cursor: pointer;
+  }
+  
+  pre, code {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  

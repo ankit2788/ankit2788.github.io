@@ -1,12 +1,19 @@
 {% assign post = include.post %}
 {% assign link_title = include.link_title %}
 
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
 
 <p align="center"">
   <img src="/data/logo/Project Quant_white_200.png" alt="Project Quant Book">  
 </p>
 <article id="post{{ post.id | replace:'/','-' }}" class="page post{% if link_title %} mb6{% endif %}" role="article">
   {% include math.html %}
+
+  <script type="text/javascript" src="{{ '/assets/js/mathjax.js' | relative_url }}"></script>
+
+
+
+
   <!-- <script type="text/javascript" 
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>       -->
@@ -50,6 +57,8 @@
  
 	{% include message.html text=post.description hide=page.hide_description %}
   </header>
+
+  
 
   {% unless include.excerpt %}
     {{ post.content }}

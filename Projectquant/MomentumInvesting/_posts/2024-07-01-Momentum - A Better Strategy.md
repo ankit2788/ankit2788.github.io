@@ -8,18 +8,18 @@ categories: [Projectquant, MomentumInvesting]
 ---
 
 
-This is the last article in the Momentum series. The first article, _[Momentum in India](/projectquant/2024-06-21-Momentum-in-India/)_ talked about how Momentum Investing has fared in India, and a bit of history about it. We also covered how Equity Momentum compares with other factors and asset classes' performance. 
+This is the last article in the Momentum series. The first article, _[Momentum in India](/projectquant/momentuminvesting/2024-06-21-Momentum-in-India/)_ talked about how Momentum Investing has fared in India, and a bit of history about it. We also covered how Equity Momentum compares with other factors and asset classes' performance. 
 
-The second article in the series, _[The Base Momentum Portfolio](/projectquant/2024-06-25-The-Base-Momentum-Portfolio/)_ touched upon a basic Momentum Portfolio with a naive trend filters. We introduced the impact of rebalancing frequency and also how analysed how rebalancing in middle of month is better. 
+The second article in the series, _[The Base Momentum Portfolio](/projectquant/momentuminvesting/2024-06-25-The-Base-Momentum-Portfolio/)_ touched upon a basic Momentum Portfolio with a naive trend filters. We introduced the impact of rebalancing frequency and also how analysed how rebalancing in middle of month is better. 
 
-The 3rd article, _[Risk Management & Portfolio Construction](/projectquant/2024-06-27-Momentum---RiskManagement-&-PortfolioConstruction/)_ was all about risk management. Stop Loss, along with asset diversification helps in reducing portfolio volatility. This is already a known fact, but how different stoploss factors impact the performance is also important. Besides, we tried different asset allocation schemes such as Maximizing the risk adjusted returns every month. Lastly, we identified how introduction of earnings momentum significantly improved the portfolios' metrics.
+The 3rd article, _[Risk Management & Portfolio Construction](/projectquant/momentuminvesting/2024-06-27-Momentum---RiskManagement-&-PortfolioConstruction/)_ was all about risk management. Stop Loss, along with asset diversification helps in reducing portfolio volatility. This is already a known fact, but how different stoploss factors impact the performance is also important. Besides, we tried different asset allocation schemes such as Maximizing the risk adjusted returns every month. Lastly, we identified how introduction of earnings momentum significantly improved the portfolios' metrics.
 
 In this article, _the last in this series_, we will incorporate all the features we analyzed previously, and will incrementally construct the portfolio. So, warm up your coffee, sit upright and start!
 
 
 ## The Incremental Portfolio Construction 
 
-We start with our base portfolio with a single factor, 12M returns trend (_skipping last 1 month_), and rebalancing on 1st of every Month with No Risk Management what so ever. This is the base portfolio we created in [2nd article](/projectquant/2024-06-25-The-Base-Momentum-Portfolio/). This portfolio, performed better than our Nifty 50 Index, both in terms of Risk adjusted returns (Sharpe) or pure returns. However, this portfolio had a drawdown of nearly 60%, occured during the Great Financial Crisis.
+We start with our base portfolio with a single factor, 12M returns trend (_skipping last 1 month_), and rebalancing on 1st of every Month with No Risk Management what so ever. This is the base portfolio we created in [2nd article](/projectquant/momentuminvesting/2024-06-25-The-Base-Momentum-Portfolio/). This portfolio, performed better than our Nifty 50 Index, both in terms of Risk adjusted returns (Sharpe) or pure returns. However, this portfolio had a drawdown of nearly 60%, occured during the Great Financial Crisis.
 
 The introduction of another factor (_3M returns_), making the portfolio a **Multi factor**, slightly improved the CAGR, without much improvement in the Sharpe ratios. 
 
