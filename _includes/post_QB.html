@@ -7,6 +7,7 @@
   <img src="/data/logo/Project Quant_white_200.png" alt="Project Quant Book">  
 </p>
 <article id="post{{ post.id | replace:'/','-' }}" class="page post{% if link_title %} mb6{% endif %}" role="article">
+  {% include analytics.html %} 
   {% include math.html %}
 
   <script type="text/javascript" src="{{ '/assets/js/mathjax.js' | relative_url }}"></script>
