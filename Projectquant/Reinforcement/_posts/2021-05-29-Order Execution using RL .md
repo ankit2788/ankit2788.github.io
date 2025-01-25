@@ -1,15 +1,20 @@
 ---
-layout: post
+layout: quantBook
 title: Order Execution using RL
 date: 2021-05-29
-tags: [Applications]
+tags: [Reinforcement]
 comments: true
-categories: [Reinforcement, Applications]
+categories: [Projectquant, Reinforcement]
 ---
+
 
 Moving further in our series of Reinforcement Learning and its applications in Finance, this article talks about __Order Execution__ in Financial Markets. A classic problem like this, laid the foundations of RL in Finance. One of the very early papers ([Reinforcement Learning for Optimized Trade Execution](https://www.seas.upenn.edu/~mkearns/papers/rlexec.pdf){:target="_blank"} by Yuriy Nevmyvaka et al) in 2005-06. The early penetration into RL gives an idea how important this problem is. 
 
 In this post, we will give a high level description of the problem statement before jumping onto the RL based solution. At the end, we will compare the results of different RL techniques alongside some base level market adopted (non RL) algorithms.
+
+
+{% include admonition.html type="note" title="Note" body="Whitepaper is available <a href='https://ankit2788.github.io/data/documents/RL_OrderExecution.pdf'>here</a> for anywhere read" %}
+
 
 
 ## Problem Description

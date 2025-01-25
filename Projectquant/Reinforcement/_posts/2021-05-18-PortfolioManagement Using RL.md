@@ -1,18 +1,20 @@
 ---
-layout: post
+layout: quantBook
 title: Portfolio Management using RL
 date: 2021-05-18
-tags: [Applications]
+tags: [Reinforcement]
 comments: true
-categories: [Reinforcement, Applications]
+categories: [Projectquant, Reinforcement]
 ---
 
-In the earlier posts on RL, we talked about various algorithms, such as DQN, A3C, DDPG etc.
+
+In the [earlier posts](/reinforcement/policymethods/){:target="_blank"} on RL, we talked about various algorithms, such as DQN, A3C, DDPG etc.
 But, how great it would be to apply these algorithms in the realm of Finance. 
 
 This post is dedicated to the very first Finance Use case of RL, viz, __Portfolio Management__. Without further ado, let's deep dive into the problem statement and how we will frame the problem using RL. <br>
 So, sit back and grab your coffee. 
 
+{% include admonition.html type="note" title="Note" body="Whitepaper is available <a href='https://ankit2788.github.io/data/documents/RL_%20PortfolioManagement.pdf'>here</a> for anywhere read" %}
 
 ## Summary
 As any RL problem, our goal is to maximize the reward. Here, the goal is to train multiple Deep Reinforcement Learning (DRL) agents to _maximize Stock Portfolio performance over time_.

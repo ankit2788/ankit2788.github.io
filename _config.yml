@@ -94,6 +94,8 @@ defaults:
           url: Projectquant/MomentumInvesting/index.html
         - title: "Financial Engineering"
           url: Projectquant/FinancialEngineering/index.html
+        - title: "Reinforcement Learning"
+          url: Projectquant/Reinforcement/index.html
   - scope:
       path: Reinforcement/index.html
     values:
@@ -102,8 +104,6 @@ defaults:
       children:
         - title: "Policy Methods"
           url: Reinforcement/PolicyMethods/index.html
-        - title: "Applications"
-          url: Reinforcement/Applications/index.html
   - scope:
       path: Fractals/index.html
     values:
@@ -141,6 +141,10 @@ custom_tag_description:
         description: Posts pertaining to the practical application of Financial Engineering
         title: Financial Engineering
         url: FinancialEngineering/index.html
+      Reinforcement:
+        description: Posts pertaining to practical usage of Reinforcement Learning 
+        title: Reinforcement Learning
+        url: Reinforcement/index.html
 
   Reinforcement:
     pretty: Reinforcement Learning
@@ -151,11 +155,7 @@ custom_tag_description:
         description: Posts pertaining to Policy methods in Reinforcement Learning
         title: Policy Methods
         url: PolicyMethods/index.html
-      Applications:
-        description: Posts pertaining to applications of RL in the world of Finance
-        title: RL Applications
-        url: Applications/index.html
-
+      
   Fractals:
     pretty: Fractals
     description: Posts related to Fractals and its beautiful applications.
