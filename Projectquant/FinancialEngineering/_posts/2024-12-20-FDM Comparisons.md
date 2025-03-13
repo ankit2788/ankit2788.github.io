@@ -4,7 +4,7 @@ title: "Numerical Methods - Comparing different FDMs"
 date: 2024-12-20
 tags: [FinancialEngineering]
 comments: true
-categories: [Projectquant, FinancialEngineering]
+categories: [Projectquant]
 usemathjax: true
 ---
 

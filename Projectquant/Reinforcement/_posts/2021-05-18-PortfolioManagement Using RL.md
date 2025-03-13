@@ -4,7 +4,7 @@ title: Portfolio Management using RL
 date: 2021-05-18
 tags: [Reinforcement]
 comments: true
-categories: [Projectquant, Reinforcement]
+categories: [Projectquant]
 ---
 
 

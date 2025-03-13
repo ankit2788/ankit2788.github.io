@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: Reinforcement Learning
+title: Financial Engineering
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: Reinforcement
+slug: FinancialEngineering
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Reinforcement Learning related articles
+  A practical approach towards Financial Engineering.
 
 # Setting `menu` will generate an entry in the sidebar for this tag.
 menu: false

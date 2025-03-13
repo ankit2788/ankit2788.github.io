@@ -5,16 +5,17 @@
 {% assign end_with = include.end_with %}
 
 {% assign content = '' %}
-
 {% if cats.size > 0 %}
   {% assign content = start_with %}
   {% for cat_slug in cats %}
       {% capture iter_separator %}{% if forloop.last %}{{ end_with }}{% else %}{{ separator }}{% endif %}{% endcapture %}
 
       {% assign cat = meta | where: "slug", cat_slug | first %}
-	  
-      {% assign cat_name = site.custom_tag_description[cat_slug].pretty %}
-	  
+    
+      <!-- {% assign cat_name = site.custom_tag_description[cat_slug].pretty %} -->
+      {% assign cat_name = site.all_categories_tags_descriptions[cat_slug].pretty %}
+      
+    
 	  {% if cat and cat_name %}
         {% capture content_temp %}{{ content }}<a href="{{ cat.url | relative_url }}" class="flip-title">{{ cat_name }}</a>{{ iter_separator }}{% endcapture %}
       {% else %}

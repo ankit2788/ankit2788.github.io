@@ -4,7 +4,7 @@ title: Order Execution using RL
 date: 2021-05-29
 tags: [Reinforcement]
 comments: true
-categories: [Projectquant, Reinforcement]
+categories: [Projectquant]
 ---
 
 

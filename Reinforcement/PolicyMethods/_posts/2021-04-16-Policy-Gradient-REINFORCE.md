@@ -4,7 +4,7 @@ title: "Policy Gradient - REINFORCE"
 date: 2021-04-16
 tags: [PolicyMethods]
 comments: true
-categories: [Reinforcement, PolicyMethods]
+categories: [Reinforcement]
 usemathjax: true
 ---
 

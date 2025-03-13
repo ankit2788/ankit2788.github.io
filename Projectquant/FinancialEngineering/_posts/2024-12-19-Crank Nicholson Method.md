@@ -4,7 +4,7 @@ title: "Numerical Methods - Crank Nicholson Method"
 date: 2024-12-19
 tags: [FinancialEngineering]
 comments: true
-categories: [Projectquant, FinancialEngineering]
+categories: [Projectquant]
 usemathjax: true
 ---
 

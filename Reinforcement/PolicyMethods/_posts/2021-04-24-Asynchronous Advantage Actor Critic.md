@@ -4,7 +4,7 @@ title: Asynchronous Advantage Actor Critic Methods
 date: 2021-04-24
 tags: [PolicyMethods]
 comments: true
-categories: [Reinforcement, PolicyMethods]
+categories: [Reinforcement]
 usemathjax: true
 ---
 

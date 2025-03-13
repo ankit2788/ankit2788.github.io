@@ -4,7 +4,7 @@ title: "Part 4 - Construction of a better Portfolio"
 date: 2024-06-27
 tags: [MomentumInvesting]
 comments: true
-categories: [Projectquant, MomentumInvesting]
+categories: [Projectquant]
 ---
 
 

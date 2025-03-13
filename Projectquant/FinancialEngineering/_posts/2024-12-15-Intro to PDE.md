@@ -4,7 +4,7 @@ title: "Introduction to Partial Differential Equations"
 date: 2024-12-15
 tags: [FinancialEngineering]
 comments: true
-categories: [Projectquant, FinancialEngineering]
+categories: [Projectquant]
 usemathjax: true
 ---
 

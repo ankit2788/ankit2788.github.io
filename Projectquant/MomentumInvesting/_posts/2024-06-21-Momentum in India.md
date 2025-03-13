@@ -4,7 +4,7 @@ title: "Part 1 - Origins in India"
 date: 2024-06-21
 tags: [MomentumInvesting]
 comments: true
-categories: [Projectquant, MomentumInvesting]
+categories: [Projectquant]
 ---
 
 

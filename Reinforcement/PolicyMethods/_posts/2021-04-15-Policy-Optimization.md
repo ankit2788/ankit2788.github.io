@@ -4,7 +4,7 @@ title: "Policy Optimization - Part 0"
 date: 2021-04-15
 tags: [PolicyMethods]
 comments: true
-categories: [Reinforcement, PolicyMethods]
+categories: [Reinforcement]
 usemathjax: true
 ---
 

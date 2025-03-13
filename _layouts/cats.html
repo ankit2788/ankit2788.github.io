@@ -53,9 +53,8 @@ layout: base
 
       {% assign tag_name = category | first %}      
       {% assign slug = tag_name | slugify %}
-      
-      {% assign pretty = site.custom_tag_description[tag_name].pretty %}
-      {% assign url = site.custom_tag_description[tag_name].url %}
+      {% assign pretty = site.all_categories_tags_descriptions[tag_name].pretty %}
+      {% assign url = site.all_categories_tags_descriptions[tag_name].url %}
       {% assign custom_url = '/' | append: slug %}  <!-- Updated to generate a relative URL without 'categories/' -->
       
       
@@ -65,7 +64,7 @@ layout: base
       <h2 id="{{ tag[0] | slugify }}"> {{ tag_name }} </h2>
       {% endif %}
       
-      {% assign desc = site.custom_tag_description[tag_name].description %}
+      {% assign desc = site.all_categories_tags_descriptions[tag_name].description %}
       {% include message.html text=desc hide=page.hide_description %}
       <ul>
       {% assign posts = site.categories[tag_name] %}
@@ -75,7 +74,7 @@ layout: base
       
         {% endfor %}
       
-      {% capture post_title %}<a class="heading flip-title" href="{{custom_url}}">{{ site.custom_tag_description[tag_name].pretty }}</a>{% endcapture %}
+      {% capture post_title %}<a class="heading flip-title" href="{{custom_url}}">{{ site.all_categories_tags_descriptions[tag_name].pretty }}</a>{% endcapture %}
       {% assign text = site.data.strings.view_posts | default:"View more posts on <!--post_title-->" %}
       <footer>
         <p class="read-more">

@@ -4,7 +4,7 @@ title: Deep Determinsitic Policy Gradient Algorithm
 date: 2021-04-26
 tags: [PolicyMethods]
 comments: true
-categories: [Reinforcement, PolicyMethods]
+categories: [Reinforcement]
 usemathjax: true
 ---
 

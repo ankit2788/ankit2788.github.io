@@ -1,0 +1,33 @@
+---
+category: Projectquant
+tag: FinancialEngineering
+layout: feed
+---
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Ankit's Blog</title>
+	<link href="http://ankit2788.github.io/Projectquant/NumericalMethods/atom.xml" rel="self"/>
+	<link href="http://ankit2788.github.io/Projectquant/NumericalMethods/"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://ankit2788.github.io/Projectquant/NumericalMethods/</id>
+	<author>
+		<name>Ankit Gupta</name>
+		<email>ankit.elec.iitd@gmail.com</email>
+	</author>
+
+	{% for post in site.posts %}
+	{% if post.categories contains 'Projectquant' %}
+		{% if post.tags contains 'NumericalMethods' %}
+			<entry>
+				<title>{{ post.title }}</title>
+				<link href="http://ankit2788.github.io{{ post.url }}"/>
+				<updated>{{ post.date | date_to_xmlschema }}</updated>
+				<id>http://ankit2788.github.io{{ post.id }}</id>
+				<content type="html">{{ post.content | xml_escape }}</content>
+			</entry>
+		{% endif %}	
+	{% endif %}
+	{% endfor %}
+
+</feed> -->

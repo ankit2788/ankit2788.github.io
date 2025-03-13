@@ -4,7 +4,7 @@ title: "Part 3 - Risk Management and Portfolio Construction"
 date: 2024-06-27
 tags: [MomentumInvesting]
 comments: true
-categories: [Projectquant, MomentumInvesting]
+categories: [Projectquant]
 ---
 
 

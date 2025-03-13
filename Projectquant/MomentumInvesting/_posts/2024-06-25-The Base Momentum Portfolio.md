@@ -4,7 +4,7 @@ title: "Part 2 - The Base Portfolio"
 date: 2024-06-25
 tags: [MomentumInvesting]
 comments: true
-categories: [Projectquant, MomentumInvesting]
+categories: [Projectquant]
 ---
 
 

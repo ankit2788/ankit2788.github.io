@@ -4,7 +4,7 @@ title: "Numerical Methods - Implicit Euler Methods"
 date: 2024-12-18
 tags: [FinancialEngineering]
 comments: true
-categories: [Projectquant, FinancialEngineering]
+categories: [Projectquant]
 usemathjax: true
 ---
 
