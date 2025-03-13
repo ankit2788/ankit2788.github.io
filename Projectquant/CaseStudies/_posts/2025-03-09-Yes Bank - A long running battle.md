@@ -117,7 +117,7 @@ It seemed pretty straight forward that RBI intervened in March 2020. Gradually Y
 Over the years, Banks have flocked to issue these Bonds for reasons as mentioned above. For a complete study of AT1 Bonds in India, I highly recommend the study done by <a href="https://www.iibf.org.in/documents/Report%20on%20AT1%20Bonds%20Submitted%20by%20Mr%20Saket%20Kumar.pdf">Saket Kumar, published at IIBF</a>
 
 <p align="center"> 
-<img src="/data/documents/caseStudies/yesbank/AT1Issuances.png" alt="Timeline"  width="430" height="250" text-align="center"/>
+<img src="/data/documents/caseStudies/yesbank/AT1issuances.png" alt="Timeline"  width="430" height="250" text-align="center"/>
 </p>
 <br>
 </details>
