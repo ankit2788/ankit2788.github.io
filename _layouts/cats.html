@@ -52,11 +52,11 @@ layout: base
 
 
       {% assign tag_name = category | first %}      
-      {% assign slug = tag_name | slugify %}
+      <!-- {% assign slug = tag_name | slugify %} -->
+      {% assign slug = tag_name %}
       {% assign pretty = site.all_categories_tags_descriptions[tag_name].pretty %}
       {% assign url = site.all_categories_tags_descriptions[tag_name].url %}
       {% assign custom_url = '/' | append: slug %}  <!-- Updated to generate a relative URL without 'categories/' -->
-      
       
       {% if pretty %}
       <h2 id="{{ tag[0] | slugify }}"> {{ pretty }} </h2>

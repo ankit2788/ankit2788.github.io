@@ -133,7 +133,7 @@ custom_tag_description:
   Projectquant:
     pretty: Project Quant
     description: Posts pertaining to Project Quant
-    url: projectquant/index.html
+    url: Projectquant/index.html
     tags:
       MomentumInvesting:
         description: Posts pertaining to Momentum Investing in Indian markets
@@ -166,12 +166,12 @@ custom_tag_description:
   Fractals:
     pretty: Fractals
     description: Posts related to Fractals and its beautiful applications.
-    url: fractals/index.html
+    url: Fractals/index.html
 
   Finance:
     pretty: Financial Markets
     description: Posts pertaining to Financial markets and analysis.
-    url: finance/index.html
+    url: Finance/index.html
 
 
 
@@ -219,11 +219,11 @@ all_categories_tags_descriptions:
   Fractals:
     pretty: Fractals
     description: Posts related to Fractals and its beautiful applications.
-    url: fractals/index.html
+    url: Fractals/index.html
   Finance:
     pretty: Financial Markets
     description: Posts pertaining to Financial markets and analysis.
-    url: finance/index.html
+    url: Finance/index.html
 
 
 # 3rd Party Integrations
