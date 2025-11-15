@@ -55,7 +55,9 @@ Well, quite a hiked up yield, isnt it? In Privates, this is a new high, atleast 
 If the argument is Indian market has its own challenges with country risk, geo-political risk, currency risk and many others. 
 Even from Indian's market perspective, this is one of the highest yielding product/ deal. Ofcourse, you shouldnt forget Gold Silver rush in recent times, but barring that this Private market exceeds all benchmarks, even a High Yielding Corporate Bond market in India.
 
-{% include /casestudiesHTML/spgroup/India_returns.html %} 
+<div class="chart-container">
+    {% include /casestudiesHTML/spgroup/India_returns.html %} 
+</div>    
 <br>
 
 -----
@@ -63,7 +65,10 @@ Even from Indian's market perspective, this is one of the highest yielding produ
 ### So, who all participated in this lucrative offer? 
 
 The whole deal was led by Deutsche, who themselves committed nearly $900 million. In total, the syndicate consists of nearly 15 parties, with varying participation. 
-{% include /casestudiesHTML/spgroup/investors.html %} 
+
+<div class="chart-container">
+    {% include /casestudiesHTML/spgroup/investors.html %} 
+</div>    
 
 
 {% include admonition.html type="note" title="<b>Note!</b>" body="
@@ -82,7 +87,9 @@ SP Group is known to be one of the significant stakeholders in Tata Sons, a hold
 Now, as part of this new financial deal, SP Group [__pledged 9–9.2% stake__](https://www.business-standard.com/companies/news/shapoorji-group-bags-3-35-bn-in-largest-private-deal-led-by-deutsche-bank-125053100292_1.html){:target="_blank"} as collateral in Tata Sons, held via Sterling Investment. 
 Besides the Tata Sons stake, this deal is also secured through SP Group's assets in its Real Estate and Energy businesses.
 
-{% include /casestudiesHTML/spgroup/sp_group_tata_stake.html %} 
+<div class="chart-container">
+    {% include /casestudiesHTML/spgroup/sp_group_tata_stake.html %} 
+</div>
 
 
 Now, this stake becomes quite important for the story. In any other case, this stake acting as collateral wouldnt have mattered. But, since the whole Tata-Mistry Saga unfolded, this stake matters now more than anything
