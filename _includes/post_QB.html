@@ -2,7 +2,7 @@
 {% assign link_title = include.link_title %}
 
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+<!-- <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css"> -->
 
 <p align="center"">
   <img src="/data/logo/Project Quant_white_200.png" alt="Project Quant Book">  
@@ -20,6 +20,7 @@
     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>       -->
   <header>
+    
     {% include analytics.html %} 
     <h1 class="post-title">
       {% if link_title %}<a href="{{ post.url | relative_url }}" class="flip-title">{% endif %}

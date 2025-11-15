@@ -267,3 +267,26 @@
 .icon-mail2:before {
   content: "\ea84";
 }
+
+/* -----------------------------
+Responsive Plotly Chart Wrapper
+----------------------------- */
+.chart-wrapper {
+width: 100%;
+max-width: 900px;        /* Desktop width */
+margin: auto;
+padding: 0 12px;         /* Mobile breathing room */
+}
+
+.chart-wrapper > div {
+width: 100% !important;
+height: auto !important;
+min-height: 350px;       /* Ensure readable height */
+}
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+.chart-wrapper > div {
+  min-height: 280px !important;
+}
+}

@@ -31,6 +31,7 @@
 @import "mathjax";
 @import "styletable";
 
+
 @import "reboot-mod";
 
 {% unless site.hydejack.no_inline_css or jekyll.environment == 'development' %}
@@ -66,6 +67,7 @@
 
   // @import "my-inline";
   @import "my-style";
+  @import "responsive";
 
   {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
     .wf-active {

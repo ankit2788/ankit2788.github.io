@@ -26,6 +26,7 @@ In this short case study <br>
 
 
 
+
 -----
 -----
 
@@ -36,8 +37,19 @@ The deal is one if its kind. Largest Private credit financing in India so far wi
 
 Well, quite a hiked up yield, isnt it? In Privates, this is a new high, atleast in India. Earlier, Goswami Infratech (again, part of SP Group only) raised nearly $1.7 Billion with an annual yield of ~18.75%. This was back in [2023](https://www.reuters.com/markets/rates-bonds/indias-shapoorji-group-entitys-bond-issue-signals-appetite-pvt-credit-funds-2023-06-27/){:target="_blank"}. This yield surpasses major markets' average definitley. 
 
-{% include /casestudiesHTML/spgroup/private_credit_yield_comparison.html %} 
+
+<div class="chart-container">
+  {% include /casestudiesHTML/spgroup/private_credit_yield_comparison.html %}
+</div>
+
+<!-- {% include /casestudiesHTML/spgroup/private_credit_yield_comparison.html %}  -->
 <br>
+
+
+
+
+
+
 
 
 If the argument is Indian market has its own challenges with country risk, geo-political risk, currency risk and many others. 
