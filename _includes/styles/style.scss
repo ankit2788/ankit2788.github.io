@@ -30,6 +30,7 @@
 @import "collapsiblestyle";
 @import "mathjax";
 @import "styletable";
+@import "responsive";
 
 
 @import "reboot-mod";
@@ -67,7 +68,7 @@
 
   // @import "my-inline";
   @import "my-style";
-  @import "responsive";
+  
 
   {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
     .wf-active {
