@@ -16,3 +16,29 @@
     padding: 0;
   }
 }
+
+/* responsive.scss */
+
+/* By default, show interactive chart (desktop) and hide static image */
+.chart-desktop {
+  display: block;
+}
+.chart-mobile {
+  display: none;
+}
+
+/* Mobile screens: hide interactive chart, show static image */
+@media screen and (max-width: 768px) {
+  .chart-desktop {
+    display: none;
+  }
+  .chart-mobile {
+    display: block;
+  }
+
+  /* Optional: reduce font size for labels in any inline images or captions */
+  .chart-mobile img {
+    max-width: 100%;
+    height: auto;
+  }
+}

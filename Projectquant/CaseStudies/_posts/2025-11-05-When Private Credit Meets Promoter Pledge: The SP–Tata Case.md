@@ -38,9 +38,17 @@ The deal is one if its kind. Largest Private credit financing in India so far wi
 Well, quite a hiked up yield, isnt it? In Privates, this is a new high, atleast in India. Earlier, Goswami Infratech (again, part of SP Group only) raised nearly $1.7 Billion with an annual yield of ~18.75%. This was back in [2023](https://www.reuters.com/markets/rates-bonds/indias-shapoorji-group-entitys-bond-issue-signals-appetite-pvt-credit-funds-2023-06-27/){:target="_blank"}. This yield surpasses major markets' average definitley. 
 
 
-<div class="chart-container" style="width:100%; max-width:100%; aspect-ratio:16/9;">
+<!-- Desktop: Interactive Plotly -->
+<div class="chart-desktop" style="width:100%; max-width:100%; aspect-ratio:16/9;">
   {% include /casestudiesHTML/spgroup/private_credit_yield_comparison.html %}
 </div>
+
+<!-- Mobile: Static Image -->
+<div class="chart-mobile">
+  <img src="/data/pics/casestudies/spgroup/private_credit_yield_comparison.png" 
+       alt="Private Credit Yield Comparison">
+</div>
+
 
 <!-- {% include /casestudiesHTML/spgroup/private_credit_yield_comparison.html %}  -->
 <br>
@@ -48,16 +56,20 @@ Well, quite a hiked up yield, isnt it? In Privates, this is a new high, atleast 
 
 
 
-
-
-
-
 If the argument is Indian market has its own challenges with country risk, geo-political risk, currency risk and many others. 
 Even from Indian's market perspective, this is one of the highest yielding product/ deal. Ofcourse, you shouldnt forget Gold Silver rush in recent times, but barring that this Private market exceeds all benchmarks, even a High Yielding Corporate Bond market in India.
 
-<div class="chart-container" style="width:100%; max-width:100%; aspect-ratio:16/9;">
-    {% include /casestudiesHTML/spgroup/India_returns.html %} 
-</div>    
+<!-- Desktop: Interactive Plotly -->
+<div class="chart-desktop" style="width:100%; max-width:100%; aspect-ratio:16/9;">
+  {% include /casestudiesHTML/spgroup/India_returns.html %}
+</div>
+
+<!-- Mobile: Static Image -->
+<div class="chart-mobile">
+  <img src="/data/pics/casestudies/spgroup/India_returns.png" 
+       alt="India market">
+</div>
+
 <br>
 
 -----
@@ -66,9 +78,17 @@ Even from Indian's market perspective, this is one of the highest yielding produ
 
 The whole deal was led by Deutsche, who themselves committed nearly $900 million. In total, the syndicate consists of nearly 15 parties, with varying participation. 
 
-<div class="chart-container" style="width:100%; max-width:100%; aspect-ratio:16/9;">
-    {% include /casestudiesHTML/spgroup/investors.html %} 
-</div>    
+
+<!-- Desktop: Interactive Plotly -->
+<div class="chart-desktop" style="width:100%; max-width:100%; aspect-ratio:16/9;">
+  {% include /casestudiesHTML/spgroup/investors.html %}
+</div>
+
+<!-- Mobile: Static Image -->
+<div class="chart-mobile">
+  <img src="/data/pics/casestudies/spgroup/investors.png" 
+       alt="Deal Investors">
+</div>
 
 
 {% include admonition.html type="note" title="<b>Note!</b>" body="
@@ -87,9 +107,18 @@ SP Group is known to be one of the significant stakeholders in Tata Sons, a hold
 Now, as part of this new financial deal, SP Group [__pledged 9–9.2% stake__](https://www.business-standard.com/companies/news/shapoorji-group-bags-3-35-bn-in-largest-private-deal-led-by-deutsche-bank-125053100292_1.html){:target="_blank"} as collateral in Tata Sons, held via Sterling Investment. 
 Besides the Tata Sons stake, this deal is also secured through SP Group's assets in its Real Estate and Energy businesses.
 
-<div class="chart-container" style="width:100%; max-width:100%; aspect-ratio:16/9;">
-    {% include /casestudiesHTML/spgroup/sp_group_tata_stake.html %} 
+
+<!-- Desktop: Interactive Plotly -->
+<div class="chart-desktop" style="width:100%; max-width:100%; aspect-ratio:16/9;">
+  {% include /casestudiesHTML/spgroup/sp_group_tata_stake.html %}
 </div>
+
+<!-- Mobile: Static Image -->
+<div class="chart-mobile">
+  <img src="/data/pics/casestudies/spgroup/sp_group_tata_stake.png" 
+       alt="Tata Sons stake">
+</div>
+
 
 
 Now, this stake becomes quite important for the story. In any other case, this stake acting as collateral wouldnt have mattered. But, since the whole Tata-Mistry Saga unfolded, this stake matters now more than anything
