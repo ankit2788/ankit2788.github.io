@@ -16,6 +16,58 @@
 
 <style>
   body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    margin: 20px;
+    color: #111827;
+  }
+
+  h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .issuance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .issuance-table th,
+  .issuance-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .issuance-table th {
+    font-weight: 600;
+    background-color: #f9fafb;
+  }
+
+  .issuance-table tbody tr:hover {
+    background-color: #f3f4f6;
+  }
+
+  .issuance-table a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .issuance-table a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- <style>
+  body {
     font-family: Arial, sans-serif;
     margin: 10px;
   }
@@ -42,7 +94,7 @@
     line-height: 1.2;
     white-space: nowrap;
   }
-  </style>
+  </style> -->
   
 </head>
 
@@ -50,7 +102,7 @@
 
 <h2>Recent Hyperscaler Debt Issuances</h2>
 
-<table id="issuanceTable" class="display" style="width:100%">
+<table id="issuance-table" class="issuance-table" style="width:100%">
 
 <colgroup>
   <col style="width:12%">
