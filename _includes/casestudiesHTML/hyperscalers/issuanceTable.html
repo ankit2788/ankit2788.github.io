@@ -1,58 +1,48 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hyperscaler Debt Issuance</title>
+<meta charset="UTF-8">
+<title>Hyperscaler Debt Issuance</title>
 
-  <!-- DataTables CSS -->
-  <link rel="stylesheet"
-        href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css"/>
+<!-- DataTables CSS -->
+<link rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css"/>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- DataTables JS -->
-  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 10px;
-    }
-    table.dataTable {
-      font-size: 12px;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
 
-    table.dataTable thead th {
-      background-color: #f3f3f3;
-      font-weight: bold;
-    }
+table.dataTable {
+  font-size: 12px;
+}
 
-    thead input, thead select {
-      width: 100%;
-      padding: 4px;
-      box-sizing: border-box;
+table.dataTable thead th {
+  background-color: #f3f3f3;
+  font-weight: bold;
+}
 
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-    }
+thead input,
+thead select {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: auto;
-      
-      }
-
-    th, td {
-      padding: 3px 6px;      /* ⬅ key: reduces row height */
-     line-height: 1;      /* tighter rows */
-      white-space: nowrap;
-      font-size: 11px;
-      }      
-    }
-  </style>
+th, td {
+  padding: 3px 6px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+</style>
 </head>
 
 <body>
@@ -61,94 +51,81 @@
 
 <table id="issuanceTable" class="display" style="width:100%">
 
-  <colgroup>
-    <col style="width: 12%;">  <!-- Issuer -->
-    <col style="width: 11%;">  <!-- Issuance Size -->
-    <col style="width: 7%;">   <!-- Currency -->
-    <col style="width: 11%;">  <!-- Issue Date -->
-    <col style="width: 14%;">  <!-- Structure -->
-    <col style="width: 10%;">  <!-- Maturity -->
-    <col style="width: 6%;">   <!-- Coupon -->
-    <col style="width: 9%;">   <!-- Source -->
-  </colgroup>
+<colgroup>
+  <col style="width:12%">
+  <col style="width:10%">
+  <col style="width:6%">
+  <col style="width:10%">
+  <col style="width:14%">
+  <col style="width:10%">
+  <col style="width:6%">
+  <col style="width:6%">
+</colgroup>
 
-  <thead>
-    <!-- Filter Row -->
-    <tr>
-      <th>
-        <select>
-          <option value="">All Issuers</option>
-        </select>
-      </th>
-      <th><input type="text" placeholder="Search size"/></th>
-      <th>
-        <select>
-          <option value="">All</option>
-        </select>
-      </th>
-      <th><input type="text" placeholder="Search date"/></th>
-      <th>
-        <select>
-          <option value="">All</option>
-        </select>
-      </th>
-      <th><input type="text" placeholder="Search maturity"/></th>
-      <th><input type="text" placeholder="Search coupon"/></th>
-      <th><input type="text" placeholder="Search source"/></th>
-    </tr>
+<thead>
 
-    
+<!-- FILTER ROW -->
+<tr class="filters">
+  <th><select><option value="">All Issuers</option></select></th>
+  <th><input type="text" placeholder="Size"></th>
+  <th><select><option value="">All</option></select></th>
+  <th><input type="text" placeholder="Issue Date"></th>
+  <th><select><option value="">All</option></select></th>
+  <th><input type="text" placeholder="Maturity"></th>
+  <th><input type="text" placeholder="Coupon"></th>
+  <th><input type="text" placeholder="Years"></th>
+</tr>
 
-    <!-- Header Row -->
-    <tr>
-      <th>Issuer</th>
-      <th>Issuance Size</th>
-      <th>Currency</th>
-      <th>Issue Date</th>
-      <th>Structure</th>
-      <th>Maturity</th>
-      <th>Coupon</th>
-      <th>Years to maturity</th>
-    </tr>
-  </thead>
+<!-- HEADER ROW -->
+<tr>
+  <th>Issuer</th>
+  <th>Issuance Size</th>
+  <th>Currency</th>
+  <th>Issue Date</th>
+  <th>Structure</th>
+  <th>Maturity</th>
+  <th>Coupon</th>
+  <th>Years to Maturity</th>
+</tr>
 
-  <tbody>
+</thead>
 
-    <tr><td>Meta Platforms</td><td>4000 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2030</td><td>4.20%</td><td>5</td></tr>
-    <tr><td>Meta Platforms</td><td>4000 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2032</td><td>4.60%</td><td>7</td></tr>
-    <tr><td>Meta Platforms</td><td>6500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2035</td><td>4.88%</td><td>10</td></tr>
-    <tr><td>Meta Platforms</td><td>4500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2045</td><td>5.50%</td><td>20</td></tr>
-    <tr><td>Meta Platforms</td><td>6500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2055</td><td>5.63%</td><td>30</td></tr>
-    <tr><td>Meta Platforms</td><td>4500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2065</td><td>5.75%</td><td>40</td></tr>
-    <tr><td>Oracle Corporation</td><td>3000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2030</td><td>4.45%</td><td>5</td></tr>
-    <tr><td>Oracle Corporation</td><td>3000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2032</td><td>4.80%</td><td>7</td></tr>
-    <tr><td>Oracle Corporation</td><td>4000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2035</td><td>5.20%</td><td>10</td></tr>
-    <tr><td>Oracle Corporation</td><td>2500 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2045</td><td>5.88%</td><td>20</td></tr>
-    <tr><td>Oracle Corporation</td><td>3500 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2055</td><td>5.95%</td><td>30</td></tr>
-    <tr><td>Oracle Corporation</td><td>2000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>27-Sep-2065</td><td>6.10%</td><td>40</td></tr>
-    <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2028</td><td>2.38%</td><td>3</td></tr>
-    <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2031</td><td>2.88%</td><td>6</td></tr>
-    <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2034</td><td>3.13%</td><td>9</td></tr>
-    <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2038</td><td>3.50%</td><td>13</td></tr>
-    <tr><td>Alphabet Inc</td><td>1250 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2044</td><td>4.00%</td><td>19</td></tr>
-    <tr><td>Alphabet Inc</td><td>1250 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2064</td><td>4.38%</td><td>39</td></tr>
-    <tr><td>Alphabet Inc</td><td>500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2028</td><td>Float</td><td>3</td></tr>
-    <tr><td>Alphabet Inc</td><td>1000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2028</td><td>3.88%</td><td>3</td></tr>
-    <tr><td>Alphabet Inc</td><td>2500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2030</td><td>4.10%</td><td>5</td></tr>
-    <tr><td>Alphabet Inc</td><td>1250 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2032</td><td>4.38%</td><td>7</td></tr>
-    <tr><td>Alphabet Inc</td><td>3500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2035</td><td>4.70%</td><td>10</td></tr>
-    <tr><td>Alphabet Inc</td><td>2000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2045</td><td>5.35%</td><td>20</td></tr>
-    <tr><td>Alphabet Inc</td><td>4000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2055</td><td>5.45%</td><td>30</td></tr>
-    <tr><td>Alphabet Inc</td><td>2750 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2075</td><td>5.70%</td><td>50</td></tr>
-    <tr><td>Amazon.com Inc</td><td>2500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2028</td><td>3.90%</td><td>3</td></tr>
-    <tr><td>Amazon.com Inc</td><td>2500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2030</td><td>4.10%</td><td>5</td></tr>
-    <tr><td>Amazon.com Inc</td><td>1500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Mar-2033</td><td>4.35%</td><td>8</td></tr>
-    <tr><td>Amazon.com Inc</td><td>3500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2035</td><td>4.65%</td><td>10</td></tr>
-    <tr><td>Amazon.com Inc</td><td>3000 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2055</td><td>5.45%</td><td>30</td></tr>
-    <tr><td>Amazon.com Inc</td><td>2000 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2065</td><td>5.55%</td><td>40</td></tr>
-    <tr><td>Applied Digital Corporation</td><td>2350 M</td><td>USD</td><td>13-Nov-2025</td><td>Senior Secured</td><td>15-Dec-2030</td><td>9.25%</td><td>5</td></tr>
-  </tbody>
-  
+<tbody>
+  <tr><td>Meta Platforms</td><td>4000 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2030</td><td>4.20%</td><td>5</td></tr>
+  <tr><td>Meta Platforms</td><td>4000 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2032</td><td>4.60%</td><td>7</td></tr>
+  <tr><td>Meta Platforms</td><td>6500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2035</td><td>4.88%</td><td>10</td></tr>
+  <tr><td>Meta Platforms</td><td>4500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2045</td><td>5.50%</td><td>20</td></tr>
+  <tr><td>Meta Platforms</td><td>6500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2055</td><td>5.63%</td><td>30</td></tr>
+  <tr><td>Meta Platforms</td><td>4500 M</td><td>USD</td><td>03-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2065</td><td>5.75%</td><td>40</td></tr>
+  <tr><td>Oracle Corporation</td><td>3000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2030</td><td>4.45%</td><td>5</td></tr>
+  <tr><td>Oracle Corporation</td><td>3000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2032</td><td>4.80%</td><td>7</td></tr>
+  <tr><td>Oracle Corporation</td><td>4000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2035</td><td>5.20%</td><td>10</td></tr>
+  <tr><td>Oracle Corporation</td><td>2500 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2045</td><td>5.88%</td><td>20</td></tr>
+  <tr><td>Oracle Corporation</td><td>3500 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>26-Sep-2055</td><td>5.95%</td><td>30</td></tr>
+  <tr><td>Oracle Corporation</td><td>2000 M</td><td>USD</td><td>26-Sep-2025</td><td>Senior Unsecured</td><td>27-Sep-2065</td><td>6.10%</td><td>40</td></tr>
+  <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2028</td><td>2.38%</td><td>3</td></tr>
+  <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2031</td><td>2.88%</td><td>6</td></tr>
+  <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2034</td><td>3.13%</td><td>9</td></tr>
+  <tr><td>Alphabet Inc</td><td>1000 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2038</td><td>3.50%</td><td>13</td></tr>
+  <tr><td>Alphabet Inc</td><td>1250 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2044</td><td>4.00%</td><td>19</td></tr>
+  <tr><td>Alphabet Inc</td><td>1250 M</td><td>EUR</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>06-Nov-2064</td><td>4.38%</td><td>39</td></tr>
+  <tr><td>Alphabet Inc</td><td>500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2028</td><td>Float</td><td>3</td></tr>
+  <tr><td>Alphabet Inc</td><td>1000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2028</td><td>3.88%</td><td>3</td></tr>
+  <tr><td>Alphabet Inc</td><td>2500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2030</td><td>4.10%</td><td>5</td></tr>
+  <tr><td>Alphabet Inc</td><td>1250 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2032</td><td>4.38%</td><td>7</td></tr>
+  <tr><td>Alphabet Inc</td><td>3500 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2035</td><td>4.70%</td><td>10</td></tr>
+  <tr><td>Alphabet Inc</td><td>2000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2045</td><td>5.35%</td><td>20</td></tr>
+  <tr><td>Alphabet Inc</td><td>4000 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2055</td><td>5.45%</td><td>30</td></tr>
+  <tr><td>Alphabet Inc</td><td>2750 M</td><td>USD</td><td>06-Nov-2025</td><td>Senior Unsecured</td><td>15-Nov-2075</td><td>5.70%</td><td>50</td></tr>
+  <tr><td>Amazon.com Inc</td><td>2500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2028</td><td>3.90%</td><td>3</td></tr>
+  <tr><td>Amazon.com Inc</td><td>2500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2030</td><td>4.10%</td><td>5</td></tr>
+  <tr><td>Amazon.com Inc</td><td>1500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Mar-2033</td><td>4.35%</td><td>8</td></tr>
+  <tr><td>Amazon.com Inc</td><td>3500 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2035</td><td>4.65%</td><td>10</td></tr>
+  <tr><td>Amazon.com Inc</td><td>3000 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2055</td><td>5.45%</td><td>30</td></tr>
+  <tr><td>Amazon.com Inc</td><td>2000 M</td><td>USD</td><td>20-Nov-2025</td><td></td><td>20-Nov-2065</td><td>5.55%</td><td>40</td></tr>
+  <tr><td>Applied Digital Corporation</td><td>2350 M</td><td>USD</td><td>13-Nov-2025</td><td>Senior Secured</td><td>15-Dec-2030</td><td>9.25%</td><td>5</td></tr>
+</tbody>
+
 </table>
 
 <script>
@@ -157,27 +134,20 @@ $(document).ready(function () {
   var table = $('#issuanceTable').DataTable({
     orderCellsTop: true,
     fixedHeader: true,
-    pageLength: 10
+    pageLength: 10,
+    autoWidth: false
   });
 
   // Column-specific filters
-  table.columns().every(function (index) {
-    var column = this;
-    var headerCell = $('.filters th').eq(index);
-  });
-
-  // Setup dropdowns and text filters
-  $('#issuanceTable thead tr:eq(0) th').each(function (i) {
+  $('#issuanceTable thead tr.filters th').each(function (i) {
     var column = table.column(i);
 
-    // Dropdown columns: Issuer, Currency, Structure
+    // Dropdown filters
     if (i === 0 || i === 2 || i === 4) {
       var select = $('select', this);
 
       column.data().unique().sort().each(function (d) {
-        if (d) {
-          select.append('<option value="' + d + '">' + d + '</option>');
-        }
+        if (d) select.append('<option value="' + d + '">' + d + '</option>');
       });
 
       select.on('change', function () {
@@ -186,11 +156,9 @@ $(document).ready(function () {
       });
 
     } else {
-      // Text input filters
+      // Text filters
       $('input', this).on('keyup change clear', function () {
-        if (column.search() !== this.value) {
-          column.search(this.value).draw();
-        }
+        column.search(this.value).draw();
       });
     }
   });
