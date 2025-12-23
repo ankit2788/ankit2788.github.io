@@ -177,7 +177,7 @@ Large & longer dated issuances indicate confidence in long term growth.
 > 2. [Datacenters Information](https://www.datacentermap.com/){:target="_blank"}  
 > 3. Fund raising related news - (_Links mentioned along side in the above article_)
 > 4. Bond sales Stats - [Edgar - 8K Filings](https://www.sec.gov/search-filings){:target="_blank"}
-> 5. US Yield Curve Data - (https://www.investing.com/){:target="_blank"}
+> 5. [US Yield Curve Data](https://www.investing.com/){:target="_blank"}
 
 
 
