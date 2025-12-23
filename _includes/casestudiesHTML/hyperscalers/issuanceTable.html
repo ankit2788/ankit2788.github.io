@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -66,7 +66,7 @@
 <thead>
 
 <!-- FILTER ROW -->
-<tr class="filters">
+<!-- <tr class="filters">
   <th><select><option value="">All Issuers</option></select></th>
   <th><input type="text" placeholder="Size"></th>
   <th><select><option value="">All</option></select></th>
@@ -75,7 +75,7 @@
   <th><input type="text" placeholder="Maturity"></th>
   <th><input type="text" placeholder="Coupon"></th>
   <th><input type="text" placeholder="Years"></th>
-</tr>
+</tr> -->
 
 <!-- HEADER ROW -->
 <tr>
@@ -130,6 +130,17 @@
 </table>
 
 <script>
+$(window).on('load', function () {
+  $('#issuanceTable').DataTable({
+    pageLength: 10,
+    lengthChange: false,
+    order: [[3, 'desc']],   // sort by Issue Date
+    scrollX: true
+  });
+});
+</script>
+<!-- 
+<script>
   $(function() {
   
     // Basic DataTable init
@@ -169,7 +180,7 @@
     });
   
   });
-  </script>
+  </script> -->
   
 
 </body>
